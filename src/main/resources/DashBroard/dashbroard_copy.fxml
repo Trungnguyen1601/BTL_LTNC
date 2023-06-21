@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetau.Main.MainController">
+    <children>
+        <BorderPane prefHeight="650.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="66.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane layoutX="29.0" layoutY="-67.0" prefHeight="57.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@DesignDashBroard.css" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button layoutX="1046.0" layoutY="4.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="52.0" styleClass="close" stylesheets="@DesignDashBroard.css">
+                                    <graphic>
+                                        <FontAwesomeIcon glyphName="CLOSE" />
+                                    </graphic>
+                                </Button>
+                                <Button layoutX="991.0" layoutY="4.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="54.0" styleClass="minimize" stylesheets="@DesignDashBroard.css">
+                                    <graphic>
+                                        <FontAwesomeIcon glyphName="MINUS" />
+                                    </graphic>
+                                </Button>
+                                <Label layoutX="48.0" layoutY="20.0" prefHeight="20.0" prefWidth="147.0" text="Hệ thống đặt vé tàu">
+                                    <font>
+                                        <Font name="Microsoft Sans Serif" size="16.0" />
+                                    </font>
+                                </Label>
+                                <FontAwesomeIcon fill="#2715cf" glyphName="TRAIN" layoutX="14.0" layoutY="38.0" selectionFill="#c11515" size="2em" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </top>
+            <left>
+                <AnchorPane prefHeight="598.0" prefWidth="242.0" styleClass="nav-form" stylesheets="@DesignDashBroard.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <FontAwesomeIcon fill="#d11515" glyphName="USER" layoutX="97.0" layoutY="78.0" size="5em" />
+                        <Label layoutX="83.0" layoutY="94.0" text="WELCOME" textFill="#f4f0f0">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="101.0" layoutY="131.0" text="ADMIN" textFill="#fffdfd" />
+                        <Button layoutX="7.0" layoutY="189.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="DashBroard" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" />
+                            </graphic>
+                        </Button>
+                        <Button layoutX="7.0" layoutY="336.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Sửa thông tin chuyến tàu" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIcon fill="WHITE" glyphName="EDIT" />
+                            </graphic>
+                        </Button>
+                        <Button layoutX="7.0" layoutY="264.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Xóa chuyến tàu" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIcon fill="WHITE" glyphName="ERASER" />
+                            </graphic>
+                        </Button>
+                        <Button layoutX="7.0" layoutY="300.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Xem chuyến tàu" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIcon fill="WHITE" glyphName="EYE" />
+                            </graphic>
+                        </Button>
+                        <Button layoutX="7.0" layoutY="372.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Xem khách hàng" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIcon fill="WHITE" glyphName="EYE" />
+                            </graphic>
+                        </Button>
+                        <Button layoutX="7.0" layoutY="408.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Xem báo cáo thống kê" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIcon fill="WHITE" glyphName="BOOK" />
+                            </graphic>
+                        </Button>
+                        <Button layoutX="7.0" layoutY="225.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Thêm chuyến tàu" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIcon fill="#fcf9f9" glyphName="PLUS" />
+                            </graphic>
+                        </Button>
+                        <Button layoutX="14.0" layoutY="534.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="45.0" styleClass="signout" stylesheets="@DesignDashBroard.css" />
+                        <FontAwesomeIcon glyphName="SIGN_OUT" layoutX="25.0" layoutY="557.0" size="2em" text="" />
+                        <Label layoutX="69.0" layoutY="539.0" text="Đăng xuất" textFill="#e7dada">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane layoutX="124.0" layoutY="27.0" prefHeight="584.0" prefWidth="857.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <AnchorPane prefHeight="169.0" prefWidth="843.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css">
+                                    <children>
+                                        <AnchorPane layoutX="14.0" layoutY="7.0" prefHeight="113.0" prefWidth="250.0" stylesheets="@DesignDashBroard.css">
+                                            <children>
+                                                <AnchorPane layoutY="-1.0" prefHeight="150.0" prefWidth="72.0" styleClass="card1-left" stylesheets="@DesignDashBroard.css" />
+                                                <Label layoutX="112.0" layoutY="118.0" text="Total Sold Today" textFill="#f7f6f6">
+                                                    <font>
+                                                        <Font name="Microsoft Sans Serif" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="171.0" layoutY="14.0" text="1500" textFill="#f7f6f6">
+                                                    <font>
+                                                        <Font name="Microsoft Sans Serif" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <styleClass>
+                                                <String fx:value="card1" />
+                                                <String fx:value="card" />
+                                            </styleClass>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="316.0" layoutY="7.0" prefHeight="141.0" prefWidth="244.0" stylesheets="@DesignDashBroard.css">
+                                            <children>
+                                                <AnchorPane layoutY="-1.0" prefHeight="151.0" prefWidth="74.0" styleClass="card2-left" stylesheets="@DesignDashBroard.css" />
+                                                <Label layoutX="106.0" layoutY="118.0" text="Total Earn Today" textFill="#f7f6f6">
+                                                    <font>
+                                                        <Font name="Microsoft Sans Serif" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="165.0" layoutY="14.0" text="1500" textFill="#f7f6f6">
+                                                    <font>
+                                                        <Font name="Microsoft Sans Serif" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <styleClass>
+                                                <String fx:value="card2" />
+                                                <String fx:value="card" />
+                                            </styleClass>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="596.0" layoutY="7.0" prefHeight="143.0" prefWidth="238.0" stylesheets="@DesignDashBroard.css">
+                                            <children>
+                                                <AnchorPane layoutY="-1.0" prefHeight="150.0" prefWidth="74.0" styleClass="card3-left" stylesheets="@DesignDashBroard.css" />
+                                                <Label layoutX="105.0" layoutY="118.0" text="Available train" textFill="#f7f6f6">
+                                                    <font>
+                                                        <Font name="Microsoft Sans Serif" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="153.0" layoutY="14.0" text="1500" textFill="#f7f6f6">
+                                                    <font>
+                                                        <Font name="Microsoft Sans Serif" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <styleClass>
+                                                <String fx:value="card3" />
+                                                <String fx:value="card" />
+                                            </styleClass>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="-2.0" layoutY="204.0" prefHeight="380.0" prefWidth="846.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="40.0" layoutY="66.0" prefHeight="584.0" prefWidth="857.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <AnchorPane layoutX="7.0" prefHeight="584.0" prefWidth="271.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css">
+                                    <children>
+                                        <AnchorPane layoutX="58.0" layoutY="28.0" prefHeight="142.0" prefWidth="155.0" styleClass="image_train" stylesheets="@DesignDashBroard.css">
+                                 <children>
+                                    <ImageView fitHeight="165.0" fitWidth="200.0" layoutX="-13.0" layoutY="-10.0">
+                                       <image>
+                                          <Image url="@hinh-anh-tau-hoa-to-mau.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                                        <Button layoutX="110.0" layoutY="191.0" mnemonicParsing="false" text="Button" />
+                                        <Label layoutX="24.0" layoutY="241.0" text="Ga đi">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField layoutX="70.0" layoutY="237.0" prefHeight="26.0" prefWidth="168.0" />
+                                        <Label layoutX="24.0" layoutY="295.0" text="Ga đến">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField layoutX="70.0" layoutY="291.0" prefHeight="26.0" prefWidth="168.0" />
+                                        <Label layoutX="24.0" layoutY="347.0" text="Tàu">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField layoutX="70.0" layoutY="343.0" prefHeight="26.0" prefWidth="168.0" />
+                                        <Label layoutX="24.0" layoutY="399.0" text="Giờ đi">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField layoutX="70.0" layoutY="395.0" prefHeight="26.0" prefWidth="168.0" />
+                                        <Button layoutX="29.0" layoutY="460.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="82.0" text="Button" />
+                                        <Button layoutX="154.0" layoutY="459.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="88.0" text="Button" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="293.0" layoutY="-4.0" prefHeight="587.0" prefWidth="562.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css">
+                                    <children>
+                                        <TableView layoutX="3.0" layoutY="42.0" prefHeight="536.0" prefWidth="556.0">
+                                            <columns>
+                                                <TableColumn prefWidth="159.199951171875" text="Ga đi" />
+                                                <TableColumn prefWidth="147.19998168945312" text="Ga đến" />
+                                                <TableColumn prefWidth="131.20001220703125" text="Tàu" />
+                                                <TableColumn prefWidth="119.2000732421875" text="Giờ đi" />
+                                            </columns>
+                                        </TableView>
+                                        <TextField layoutX="26.0" layoutY="4.0" prefHeight="26.0" prefWidth="185.0" />
+                                        <FontAwesomeIcon glyphName="SEARCH" layoutX="35.0" layoutY="23.0" size="1.5em" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
