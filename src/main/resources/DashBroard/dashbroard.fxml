@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetau.TableView.DashBroardController">
+   <children>
+      <BorderPane prefHeight="650.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="66.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="29.0" layoutY="-67.0" prefHeight="57.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@DesignDashBroard.css" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="dashbroaed_close" layoutX="1298.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#Setdashbroaed_close" prefHeight="24.0" prefWidth="52.0" styleClass="close" stylesheets="@DesignDashBroard.css">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="CLOSE" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="dashbroard_minus" layoutX="1194.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#Setdashbroard_minus" prefHeight="24.0" prefWidth="54.0" styleClass="minimize" stylesheets="@DesignDashBroard.css">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="MINUS" />
+                           </graphic>
+                        </Button>
+                        <Label layoutX="48.0" layoutY="20.0" prefHeight="20.0" prefWidth="147.0" text="Hệ thống đặt vé tàu">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="16.0" />
+                           </font>
+                        </Label>
+                        <FontAwesomeIcon fill="#2715cf" glyphName="TRAIN" layoutX="14.0" layoutY="38.0" selectionFill="#c11515" size="2em" />
+                        <Button fx:id="dashbroard_phongto" layoutX="1243.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#enlargeWindow" prefHeight="24.0" prefWidth="54.0" styleClass="minimize" stylesheets="@DesignDashBroard.css">
+                           <graphic>
+                              <FontAwesomeIcon glyphName="MINUS" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="584.0" prefWidth="209.0" styleClass="nav-form" stylesheets="@DesignDashBroard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIcon fill="#d11515" glyphName="USER" layoutX="97.0" layoutY="78.0" size="5em" />
+                  <Label layoutX="83.0" layoutY="94.0" text="WELCOME" textFill="#f4f0f0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="101.0" layoutY="131.0" text="ADMIN" textFill="#fffdfd" />
+                  <Button fx:id="dashbroard_form_btn" layoutX="7.0" layoutY="189.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="DashBroard" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="train_form_btn" layoutX="3.0" layoutY="242.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Quản lý chuyến tàu" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="EDIT" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="passenger_form_btn" layoutX="7.0" layoutY="302.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Xem khách hàng" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="EYE" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="quanlytau_form_btn" layoutX="3.0" layoutY="358.0" mnemonicParsing="false" onMouseClicked="#Switch_quanlytau" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Quản lý thông tin tàu" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="BOOK" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="signout_btn" layoutX="14.0" layoutY="534.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="45.0" styleClass="signout" stylesheets="@DesignDashBroard.css" />
+                  <FontAwesomeIcon glyphName="SIGN_OUT" layoutX="25.0" layoutY="557.0" size="2em" text="" />
+                  <Label layoutX="69.0" layoutY="539.0" text="Đăng xuất" textFill="#e7dada">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="124.0" layoutY="27.0" prefHeight="584.0" prefWidth="857.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="169.0" prefWidth="843.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="7.0" prefHeight="113.0" prefWidth="250.0" stylesheets="@DesignDashBroard.css">
+                                 <children>
+                                    <AnchorPane layoutY="-1.0" prefHeight="150.0" prefWidth="72.0" styleClass="card1-left" stylesheets="@DesignDashBroard.css" />
+                                    <Label layoutX="112.0" layoutY="118.0" text="Total Sold Today" textFill="#f7f6f6">
+                                       <font>
+                                          <Font name="Microsoft Sans Serif" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="171.0" layoutY="14.0" text="1500" textFill="#f7f6f6">
+                                       <font>
+                                          <Font name="Microsoft Sans Serif" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="card1" />
+                                    <String fx:value="card" />
+                                 </styleClass>
+                              </AnchorPane>
+                              <AnchorPane layoutX="316.0" layoutY="7.0" prefHeight="141.0" prefWidth="244.0" stylesheets="@DesignDashBroard.css">
+                                 <children>
+                                    <AnchorPane layoutY="-1.0" prefHeight="151.0" prefWidth="74.0" styleClass="card2-left" stylesheets="@DesignDashBroard.css" />
+                                    <Label layoutX="106.0" layoutY="118.0" text="Total Earn Today" textFill="#f7f6f6">
+                                       <font>
+                                          <Font name="Microsoft Sans Serif" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="165.0" layoutY="14.0" text="1500" textFill="#f7f6f6">
+                                       <font>
+                                          <Font name="Microsoft Sans Serif" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="card2" />
+                                    <String fx:value="card" />
+                                 </styleClass>
+                              </AnchorPane>
+                              <AnchorPane layoutX="596.0" layoutY="7.0" prefHeight="143.0" prefWidth="238.0" stylesheets="@DesignDashBroard.css">
+                                 <children>
+                                    <AnchorPane layoutY="-1.0" prefHeight="150.0" prefWidth="74.0" styleClass="card3-left" stylesheets="@DesignDashBroard.css" />
+                                    <Label layoutX="105.0" layoutY="118.0" text="Available chuyentau" textFill="#f7f6f6">
+                                       <font>
+                                          <Font name="Microsoft Sans Serif" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="153.0" layoutY="14.0" text="1500" textFill="#f7f6f6">
+                                       <font>
+                                          <Font name="Microsoft Sans Serif" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="card3" />
+                                    <String fx:value="card" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="-2.0" layoutY="204.0" prefHeight="380.0" prefWidth="846.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="40.0" layoutY="66.0" prefHeight="584.0" prefWidth="857.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="4.0" prefHeight="674.0" prefWidth="281.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css">
+                           <children>
+                              <Label layoutX="33.0" layoutY="123.0" stylesheets="@DesignDashBroard.css" text="Ga đi">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="gadi_id" layoutX="79.0" layoutY="119.0" prefHeight="31.0" prefWidth="191.0" styleClass="add_textfield" stylesheets="@DesignDashBroard.css" />
+                              <Label layoutX="33.0" layoutY="184.0" text="Ga đến">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="gaden_id" layoutX="78.0" layoutY="177.0" prefHeight="31.0" prefWidth="192.0" styleClass="add_textfield" stylesheets="@DesignDashBroard.css" />
+                              <Label layoutX="37.0" layoutY="246.0" text="Tàu">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tau_id" layoutX="76.0" layoutY="239.0" prefHeight="31.0" prefWidth="190.0" styleClass="add_textfield" stylesheets="@DesignDashBroard.css" />
+                              <TextField fx:id="giodi_id" layoutX="76.0" layoutY="345.0" prefHeight="31.0" prefWidth="189.0" styleClass="add_textfield" stylesheets="@DesignDashBroard.css" />
+                              <Button fx:id="insert_btn_id" layoutX="14.0" layoutY="446.0" mnemonicParsing="false" onAction="#Add_train" prefHeight="45.0" prefWidth="75.0" styleClass="insert_btn" stylesheets="@DesignDashBroard.css" text="Insert" />
+                              <Button fx:id="update_btn_id" layoutX="98.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#Refresh_click" prefHeight="45.0" prefWidth="75.0" styleClass="update_btn" stylesheets="@DesignDashBroard.css" text="Refresh" />
+                              <Button fx:id="clear_btn_id" layoutX="181.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#Clear_Click" prefHeight="45.0" prefWidth="75.0" styleClass="clear_btn" stylesheets="@DesignDashBroard.css" text="Clear" />
+                              <Button fx:id="search_btn_id" layoutX="98.0" layoutY="507.0" mnemonicParsing="false" onMouseClicked="#Search_click" prefHeight="45.0" prefWidth="75.0" styleClass="clear_btn" stylesheets="@DesignDashBroard.css" text="Search" />
+                              <Label layoutX="25.0" layoutY="299.0" text="Ngày đi">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="37.0" layoutY="352.0" text="Giờ đi">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="30.0" layoutY="400.0" text="Giờ đi">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="Ngaydi_id" layoutX="75.0" layoutY="290.0" prefHeight="34.0" prefWidth="189.0" />
+                              <DatePicker fx:id="Ngayden_id" layoutX="73.0" layoutY="396.0" prefHeight="34.0" prefWidth="190.0" />
+                              <ComboBox fx:id="gadi_id_combox" layoutX="79.0" layoutY="38.0" onMouseClicked="#GetValue_Gadi" prefWidth="150.0" />
+                              <ComboBox fx:id="gaden_id_combox" layoutX="79.0" layoutY="73.0" onMouseClicked="#GetValue_Gaden" prefWidth="150.0" />
+                              <Label layoutX="33.0" layoutY="42.0" text="Ga_di" />
+                              <Label layoutX="33.0" layoutY="77.0" text="Ga_den" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="293.0" layoutY="-4.0" prefHeight="587.0" prefWidth="822.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css">
+                           <children>
+                              <TableView fx:id="Train_table" layoutX="3.0" layoutY="46.0" prefHeight="625.0" prefWidth="819.0" stylesheets="@DesignDashBroard.css">
+                                 <columns>
+                                    <TableColumn fx:id="gadi_col" prefWidth="102.39996337890625" text="Ga đi" />
+                                    <TableColumn fx:id="gaden_col" prefWidth="102.4000244140625" text="Ga đến" />
+                                    <TableColumn fx:id="tau_col" prefWidth="104.80001831054688" text="Tàu" />
+                                    <TableColumn fx:id="ngaydi_col" prefWidth="93.60003662109375" text="Ngày đi" />
+                                    <TableColumn fx:id="giodi_col" prefWidth="100.7999267578125" text="Giờ đi" />
+                                    <TableColumn fx:id="ngayden_col" minWidth="0.0" prefWidth="99.9998779296875" text="Ngày đến" />
+                                    <TableColumn fx:id="Update_col" minWidth="0.0" prefWidth="104.0001220703125" />
+                                    <TableColumn fx:id="Delete_col" minWidth="0.0" prefWidth="103.2000732421875" />
+                                 </columns>
+                              </TableView>
+                              <TextField alignment="TOP_CENTER" layoutX="26.0" layoutY="4.0" prefHeight="32.0" prefWidth="230.0" promptText="Search" styleClass="search" stylesheets="@DesignDashBroard.css" AnchorPane.topAnchor="5.0" />
+                              <FontAwesomeIcon glyphName="SEARCH" layoutX="34.0" layoutY="27.0" size="1.5em" text="" />
+                              <Label fx:id="chucnang_id" layoutX="460.0" layoutY="12.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="82.0" layoutY="78.0" prefHeight="584.0" prefWidth="966.4" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" prefHeight="200.0" prefWidth="942.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css" />
+                        <AnchorPane layoutX="12.0" layoutY="218.0" prefHeight="354.0" prefWidth="944.0" styleClass="bg-white" stylesheets="@DesignDashBroard.css" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
