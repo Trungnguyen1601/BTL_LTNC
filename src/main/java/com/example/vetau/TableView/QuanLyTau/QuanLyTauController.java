@@ -391,6 +391,19 @@ public class QuanLyTauController implements Initializable {
         Tau_table.setItems(TauList);
 
     }
+    @FXML
+    void Switch_xemKhachhang(MouseEvent event) throws IOException {
+        stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+        Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/QuanlyKhachhang/quanlyKhachhang.fxml"));
+        Scene scene_quanlytau = new Scene(root2);
+        stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
+        stage_quanlytau.setTitle("Quan lý tàu");
+        stage_quanlytau.setScene(scene_quanlytau);
+
+        stage_quanlytau.show();
+        stage_dashbroard.close();
+    }
     public void Insert_Tau()
     {
 

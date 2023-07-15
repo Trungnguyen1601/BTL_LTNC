@@ -49,7 +49,7 @@
                                 <Font name="System Bold" size="16.0" />
                             </font>
                         </Label>
-                        <Button layoutX="32.0" layoutY="341.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="DashBroard">
+                        <Button fx:id="dashbroard_form_btn" layoutX="32.0" layoutY="341.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="DashBroard">
                             <graphic>
                                 <FontAwesomeIcon glyphName="DASHBOARD" />
                             </graphic>
@@ -59,12 +59,12 @@
                                 <FontAwesomeIcon glyphName="EYE" />
                             </graphic>
                         </Button>
-                        <Button layoutX="33.0" layoutY="389.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="Quản lý chuyến tàu">
+                        <Button fx:id="train_form_btn" layoutX="33.0" layoutY="389.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="Quản lý chuyến tàu">
                             <graphic>
                                 <FontAwesomeIcon glyphName="EDIT" />
                             </graphic>
                         </Button>
-                        <Button layoutX="32.0" layoutY="487.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="Xem báo cáo thống kê">
+                        <Button fx:id="quanlytau_form_btn" layoutX="32.0" layoutY="487.0" mnemonicParsing="false" onMouseClicked="#Switch_quanlytau" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="Quản lý thông tin tàu">
                             <graphic>
                                 <FontAwesomeIcon glyphName="BOOK" />
                             </graphic>

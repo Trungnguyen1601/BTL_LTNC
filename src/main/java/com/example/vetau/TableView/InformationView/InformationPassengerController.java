@@ -9,11 +9,15 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,6 +28,14 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class InformationPassengerController implements Initializable {
+
+    @FXML
+    private Button dashbroard_form_btn;
+
+    @FXML
+    private Button quanlytau_form_btn;
+    @FXML
+    private Button train_form_btn;
     @FXML
     private TextField search_customer_txt ;
     @FXML
@@ -60,6 +72,7 @@ public class InformationPassengerController implements Initializable {
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
     Passenger customerInformation = null;
+    Stage stage_dashbroard, stage_quanlytau = new Stage();
 
     private static String ID_Customer;
 
@@ -211,6 +224,19 @@ public class InformationPassengerController implements Initializable {
         SortedList<Passenger> sortedList = new SortedList<>(filteredList);
         sortedList.comparatorProperty().bind(Customer_Table.comparatorProperty());
         Customer_Table.setItems(sortedList);
+    }
+    @FXML
+    void Switch_quanlytau(MouseEvent event) throws IOException {
+        stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+        Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/Quanlytau/quanlytau.fxml"));
+        Scene scene_quanlytau = new Scene(root2);
+        stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
+        stage_quanlytau.setTitle("Quan lý tàu");
+        stage_quanlytau.setScene(scene_quanlytau);
+
+        stage_quanlytau.show();
+        stage_dashbroard.close();
     }
 
 
