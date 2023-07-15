@@ -17,7 +17,6 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/Main/login-view.fxml"));
-//        Parent root = FXMLLoader.load(getClass().getResource("/DashBroard/Quanlytau/quanlytau.fxml"));
         Scene scene1 = new Scene(root);
         root.setOnMousePressed((MouseEvent event)->{
             x = event.getSceneX();

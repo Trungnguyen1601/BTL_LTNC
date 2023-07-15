@@ -51,27 +51,27 @@
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font></Label>
-                  <Button fx:id="dashbroard_form_btn" layoutX="10.0" layoutY="275.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="DashBroard">
+                  <Button fx:id="dashbroard_form_btn" layoutX="3.0" layoutY="275.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="DashBroard">
                      <graphic>
                         <FontAwesomeIcon glyphName="DASHBOARD" />
                      </graphic>
                   </Button>
-                  <Button fx:id="train_form_btn" layoutX="10.0" layoutY="324.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Quản lý chuyến tàu">
+                  <Button fx:id="train_form_btn" layoutX="3.0" layoutY="324.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Quản lý chuyến tàu">
                      <graphic>
                         <FontAwesomeIcon glyphName="EDIT" />
                      </graphic>
                   </Button>
-                  <Button fx:id="passenger_form_btn" layoutX="7.0" layoutY="378.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Xem khách hàng">
+                  <Button fx:id="passenger_form_btn" layoutX="3.0" layoutY="378.0" mnemonicParsing="false" onMouseClicked="#Switch_xemKhachhang" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Xem khách hàng">
                      <graphic>
                         <FontAwesomeIcon glyphName="EYE" />
                      </graphic>
                   </Button>
-                  <Button fx:id="quanlytau_form_btn" layoutX="3.0" layoutY="445.0" mnemonicParsing="false" onMouseClicked="#Switch_quanlytau" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Quản lý thông tin tàu">
+                  <Button fx:id="quanlytau_form_btn" layoutX="3.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#Switch_quanlytau" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Quản lý thông tin tàu">
                      <graphic>
                         <FontAwesomeIcon glyphName="BOOK" />
                      </graphic>
                   </Button>
-                  <Button fx:id="signout_btn" layoutX="10.0" layoutY="621.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="215.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Đăng xuất">
+                  <Button fx:id="signout_btn" layoutX="16.0" layoutY="619.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="215.0" styleClass="nav-btn" stylesheets="@DesignDashBroard.css" text="Đăng xuất">
                      <graphic>
                         <FontAwesomeIcon glyphName="SIGN_OUT" size="1.4em" text="" />
                      </graphic></Button>

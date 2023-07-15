@@ -199,8 +199,6 @@ public class DashBroardController implements Initializable {
                         Chuyen_tau chuyentau = getTableView().getItems().get(getIndex());
                         chuyentauList.remove(chuyentau);
                         Delete_inDB(chuyentau.getID_train());
-                        System.out.println("Xóa sinh viên: " + chuyentau.getID_train());
-                        // Gọi phương thức xóa sinh viên từ MySQL tại đây
                     });
                 }
             }
@@ -227,8 +225,6 @@ public class DashBroardController implements Initializable {
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
-                        System.out.println("Xem sinh viên: " + chuyentau.getID_train());
-                        // Gọi phương thức sửa thông tin sinh viên từ MySQL tại đây
                     });
                 }
             }
@@ -414,7 +410,7 @@ public class DashBroardController implements Initializable {
             chuyentauList.clear();
             while (resultSet.next())
             {
-                System.out.println("Thong tin ga tau tim kiem " + resultSet.getString("TT_Chuyentau.ID_GaDi"));
+//                System.out.println("Thong tin ga tau tim kiem " + resultSet.getString("TT_Chuyentau.ID_GaDi"));
                 gadi =new Ga_tau(resultSet.getString("TT_Chuyentau.ID_GaDi")
                         ,resultSet.getString("TT_Chuyentau.TenGaDi")
                         ,resultSet.getString("TT_Chuyentau.DiaDiem_gadi"));
@@ -488,19 +484,13 @@ public class DashBroardController implements Initializable {
             // Lấy dữ liệu từ cơ sở dữ liệu và thêm vào combobox
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-//                    System.out.println(resultSet.getInt("idTau"));
+
                 String ID_Gatau = resultSet.getString("ID_Gatau");
                 String Gatau  = resultSet.getString("Ten_Gatau");
                 String Dia_diem = resultSet.getString("Dia_diem");
                 ga_tau = new Ga_tau(ID_Gatau,Gatau,Dia_diem);
                 gadi_id_combox.getItems().add(ga_tau);
             }
-
-            // Xử lý sự kiện khi combobox được chọn
-//            gadi_id_combox.setOnAction(event -> {
-//                String selectedTrain = gadi_id_combox.getValue();
-//
-//            });
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -516,7 +506,6 @@ public class DashBroardController implements Initializable {
             // Lấy dữ liệu từ cơ sở dữ liệu và thêm vào combobox
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-//                    System.out.println(resultSet.getInt("idTau"));
                 String ID_Gatau = resultSet.getString("ID_Gatau");
                 String Gatau  = resultSet.getString("Ten_Gatau");
                 String Dia_diem = resultSet.getString("Dia_diem");
@@ -524,11 +513,6 @@ public class DashBroardController implements Initializable {
                 gaden_id_combox.getItems().add(ga_tau);
             }
 
-            // Xử lý sự kiện khi combobox được chọn
-//            gadi_id_combox.setOnAction(event -> {
-//                String selectedTrain = gadi_id_combox.getValue();
-//
-//            });
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -584,12 +568,25 @@ public class DashBroardController implements Initializable {
         stage_quanlytau.show();
         stage_dashbroard.close();
     }
+
+    @FXML
+    void Switch_xemKhachhang(MouseEvent event) throws IOException {
+        stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+        Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/QuanlyKhachhang/quanlyKhachhang.fxml"));
+        Scene scene_quanlytau = new Scene(root2);
+        stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
+        stage_quanlytau.setTitle("Quan lý tàu");
+        stage_quanlytau.setScene(scene_quanlytau);
+
+        stage_quanlytau.show();
+        stage_dashbroard.close();
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         chucnang_id.setText("Trung đẹp trai");
         loadData();
-        System.out.println("Ga đi là " + chuyentau.getGadi());
 
     }
 }

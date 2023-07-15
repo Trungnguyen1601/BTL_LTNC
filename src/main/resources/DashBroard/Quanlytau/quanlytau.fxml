@@ -7,6 +7,8 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -29,7 +31,7 @@
                                         <FontAwesomeIcon glyphName="MINUS" />
                                     </graphic>
                                 </Button>
-                                <Label layoutX="48.0" layoutY="20.0" prefHeight="20.0" prefWidth="147.0" text="Hệ thống đặt vé tàu">
+                                <Label layoutX="48.0" layoutY="20.0" prefHeight="20.0" prefWidth="203.0" text="Hệ thống đặt vé tàu">
                                     <font>
                                         <Font name="Microsoft Sans Serif" size="16.0" />
                                     </font>
@@ -46,42 +48,41 @@
                 </AnchorPane>
             </top>
             <left>
-                <AnchorPane prefHeight="584.0" prefWidth="209.0" styleClass="nav-form" stylesheets="@../DesignDashBroard.css" BorderPane.alignment="CENTER">
+                <AnchorPane prefHeight="584.0" prefWidth="209.0" style="-fx-background-color: #d3edff;" BorderPane.alignment="CENTER">
                     <children>
-                        <FontAwesomeIcon fill="#d11515" glyphName="USER" layoutX="97.0" layoutY="78.0" size="5em" />
-                        <Label layoutX="83.0" layoutY="94.0" text="WELCOME" textFill="#f4f0f0">
-                            <font>
-                                <Font name="System Bold" size="15.0" />
-                            </font>
-                        </Label>
-                        <Label layoutX="101.0" layoutY="131.0" text="ADMIN" textFill="#fffdfd" />
-                        <Button fx:id="dashbroard_form_btn" layoutX="7.0" layoutY="189.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="DashBroard" textFill="WHITE">
+                        <Label layoutX="92.0" layoutY="225.0" text="ADMIN">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+                        <Button fx:id="dashbroard_form_btn" layoutX="3.0" layoutY="276.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="DashBroard">
                             <graphic>
-                                <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" />
+                                <FontAwesomeIcon glyphName="DASHBOARD" />
                             </graphic>
                         </Button>
-                        <Button fx:id="train_mana_form_btn" layoutX="3.0" layoutY="242.0" mnemonicParsing="false" onMouseClicked="#Switch_train_form" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="Quản lý chuyến tàu" textFill="WHITE">
+                        <Button fx:id="train_mana_form_btn" layoutX="3.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#Switch_train_form" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="Quản lý chuyến tàu">
                             <graphic>
-                                <FontAwesomeIcon fill="WHITE" glyphName="EDIT" />
+                                <FontAwesomeIcon glyphName="EDIT" />
                             </graphic>
                         </Button>
-                        <Button fx:id="passenger_form_btn" layoutX="7.0" layoutY="302.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="Xem khách hàng" textFill="WHITE">
+                        <Button fx:id="passenger_form_btn" layoutX="3.0" layoutY="378.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="Xem khách hàng">
                             <graphic>
-                                <FontAwesomeIcon fill="WHITE" glyphName="EYE" />
+                                <FontAwesomeIcon glyphName="EYE" />
                             </graphic>
                         </Button>
-                        <Button fx:id="quanlytau_form_btn" layoutX="3.0" layoutY="358.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="Quản lý thông tin tàu" textFill="WHITE">
+                        <Button fx:id="quanlytau_form_btn" layoutX="3.0" layoutY="434.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="Quản lý thông tin tàu">
                             <graphic>
-                                <FontAwesomeIcon fill="WHITE" glyphName="BOOK" />
+                                <FontAwesomeIcon glyphName="BOOK" />
                             </graphic>
                         </Button>
-                        <Button fx:id="signout_btn" layoutX="14.0" layoutY="534.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="45.0" styleClass="signout" stylesheets="@../DesignDashBroard.css" />
-                        <FontAwesomeIcon glyphName="SIGN_OUT" layoutX="25.0" layoutY="557.0" size="2em" text="" />
-                        <Label layoutX="69.0" layoutY="539.0" text="Đăng xuất" textFill="#e7dada">
-                            <font>
-                                <Font name="System Bold" size="15.0" />
-                            </font>
-                        </Label>
+                        <Button fx:id="signout_btn" layoutX="16.0" layoutY="619.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="177.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="Đăng xuất">
+                     <graphic>
+                              <FontAwesomeIcon glyphName="SIGN_OUT" size="1.4em" text="" />
+                     </graphic></Button>
+                  <ImageView fitHeight="186.0" fitWidth="209.0" layoutX="27.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/welcome.png" />
+                     </image>
+                  </ImageView>
                     </children>
                 </AnchorPane>
             </left>
@@ -92,45 +93,51 @@
                             <children>
                                 <AnchorPane layoutX="4.0" prefHeight="674.0" prefWidth="281.0" styleClass="bg-white" stylesheets="@../DesignDashBroard.css">
                                     <children>
-                                        <Label layoutX="17.0" layoutY="70.0" stylesheets="@../DesignDashBroard.css" text="Tàu">
+                                        <Label layoutX="28.0" layoutY="69.0" stylesheets="@../DesignDashBroard.css" text="Tàu">
                                             <font>
-                                                <Font name="System Bold" size="12.0" />
+                                                <Font name="System Bold" size="14.0" />
                                             </font>
                                         </Label>
                                         <Label layoutX="18.0" layoutY="374.0" text="Tàu">
                                             <font>
-                                                <Font name="System Bold" size="12.0" />
+                                                <Font name="System Bold" size="14.0" />
                                             </font>
                                         </Label>
-                                        <TextField fx:id="tau_add_id" layoutX="82.0" layoutY="367.0" prefHeight="31.0" prefWidth="190.0" styleClass="add_textfield" stylesheets="@../DesignDashBroard.css" text="TAU" />
+                                        <TextField fx:id="tau_add_id" layoutX="82.0" layoutY="367.0" prefHeight="31.0" prefWidth="180.0" styleClass="add_textfield" stylesheets="@../DesignDashBroard.css" text="TAU" />
                                         <Button fx:id="insert_btn_id" layoutX="49.0" layoutY="504.0" mnemonicParsing="false" onMouseClicked="#Insert_tau_click" prefHeight="45.0" prefWidth="75.0" styleClass="insert_btn" stylesheets="@../DesignDashBroard.css" text="Insert" />
                                         <Button fx:id="clear_btn_add_id" layoutX="180.0" layoutY="504.0" mnemonicParsing="false" onMouseClicked="#Clear_Click" prefHeight="45.0" prefWidth="75.0" styleClass="clear_btn" stylesheets="@../DesignDashBroard.css" text="Clear" />
-                              <Label layoutX="87.0" layoutY="29.0" text="Xem thông tin tàu" />
-                              <ComboBox fx:id="tau_id_combobox" layoutX="66.0" layoutY="66.0" prefWidth="150.0" />
-                              <ComboBox fx:id="Toa_id_combobox" layoutX="66.0" layoutY="106.0" onMouseClicked="#Select_toa_combobox" prefWidth="150.0" />
-                              <ComboBox fx:id="Loaitoa_id_combobox" layoutX="66.0" layoutY="142.0" prefWidth="150.0" />
-                              <Button fx:id="search_btn_id" layoutX="49.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#Search_click" prefHeight="33.0" prefWidth="75.0" styleClass="clear_btn" stylesheets="@../DesignDashBroard.css" text="Search" />
-                              <Button fx:id="clear_btn_search_id" layoutX="178.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#Clear_Click" prefHeight="30.0" prefWidth="79.0" styleClass="clear_btn" stylesheets="@../DesignDashBroard.css" text="Clear" />
-                              <Label layoutX="127.0" layoutY="328.0" text="Thêm tàu" />
-                              <Label layoutX="6.0" layoutY="397.0" prefHeight="62.0" prefWidth="74.0" text="Số lượng toa">
+                              <Label layoutX="68.0" layoutY="26.0" text="Xem thông tin tàu">
                                  <font>
-                                    <Font name="System Bold" size="12.0" />
+                                    <Font name="System Bold" size="16.0" />
+                                 </font></Label>
+                              <ComboBox fx:id="tau_id_combobox" layoutX="84.0" layoutY="66.0" prefHeight="24.0" prefWidth="180.0" />
+                              <ComboBox fx:id="Toa_id_combobox" layoutX="84.0" layoutY="106.0" onMouseClicked="#Select_toa_combobox" prefWidth="180.0" />
+                              <ComboBox fx:id="Loaitoa_id_combobox" layoutX="84.0" layoutY="142.0" prefWidth="180.0" />
+                              <Button fx:id="search_btn_id" layoutX="49.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#Search_click" prefHeight="45.0" prefWidth="75.0" styleClass="clear_btn" stylesheets="@../DesignDashBroard.css" text="Search" />
+                              <Button fx:id="clear_btn_search_id" layoutX="178.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#Clear_Click" prefHeight="45.0" prefWidth="75.0" styleClass="clear_btn" stylesheets="@../DesignDashBroard.css" text="Clear" />
+                              <Label layoutX="98.0" layoutY="327.0" text="Thêm tàu">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                              <Label layoutX="6.0" layoutY="407.0" prefHeight="59.0" prefWidth="73.0" text="Số lượng toa" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="Soluongtoa_id" layoutX="82.0" layoutY="413.0" prefHeight="31.0" prefWidth="190.0" styleClass="add_textfield" stylesheets="@../DesignDashBroard.css" text="20" />
-                              <Label layoutX="17.0" layoutY="110.0" stylesheets="@../DesignDashBroard.css" text="Toa">
+                              <TextField fx:id="Soluongtoa_id" layoutX="82.0" layoutY="413.0" prefHeight="31.0" prefWidth="180.0" styleClass="add_textfield" stylesheets="@../DesignDashBroard.css" text="20" />
+                              <Label layoutX="28.0" layoutY="109.0" stylesheets="@../DesignDashBroard.css" text="Toa">
                                  <font>
-                                    <Font name="System Bold" size="12.0" />
+                                    <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
                               <Label layoutX="16.0" layoutY="146.0" stylesheets="@../DesignDashBroard.css" text="Loại toa">
                                  <font>
-                                    <Font name="System Bold" size="12.0" />
+                                    <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
                                     </children>
                                 </AnchorPane>
-                                <AnchorPane layoutX="293.0" layoutY="-4.0" prefHeight="587.0" prefWidth="822.0" styleClass="bg-white" stylesheets="@../DesignDashBroard.css">
+                                <AnchorPane layoutX="293.0" layoutY="-4.0" prefHeight="587.0" prefWidth="822.0" style="-fx-background-color: #ffd5d3;" styleClass="bg-white" stylesheets="@../DesignDashBroard.css">
                                     <children>
                                         <TableView fx:id="Tau_table" layoutX="3.0" layoutY="46.0" prefHeight="626.0" prefWidth="844.0" stylesheets="@../DesignDashBroard.css">
                                             <columns>
@@ -140,7 +147,7 @@
                                                 <TableColumn fx:id="loaitoa_col" prefWidth="160.79986572265625" text="Loại Toa" />
                                     <TableColumn fx:id="Detail_col" prefWidth="84.800048828125" text="Detail" />
                                     <TableColumn fx:id="Update_col" prefWidth="86.39990234375" text="Update" />
-                                    <TableColumn fx:id="Delete_col" prefWidth="73.60009765625" text="Delete" />
+                                    <TableColumn fx:id="Delete_col" prefWidth="78.0" text="Delete" />
                                             </columns>
                                         </TableView>
                                         <TextField alignment="TOP_CENTER" layoutX="26.0" layoutY="4.0" prefHeight="32.0" prefWidth="230.0" promptText="Search" styleClass="search" stylesheets="@../DesignDashBroard.css" AnchorPane.topAnchor="5.0" />

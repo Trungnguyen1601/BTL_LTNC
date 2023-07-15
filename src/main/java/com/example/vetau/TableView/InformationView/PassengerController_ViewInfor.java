@@ -1,6 +1,6 @@
-package com.example.customer;
+package com.example.vetau.TableView.InformationView;
 
-import com.example.customer.database.database;
+import com.example.vetau.helpers.Database;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -9,10 +9,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class CustomerController implements Initializable {
+public class PassengerController_ViewInfor implements Initializable {
     @FXML
     private TextField infor_CCCD_txt;
 
@@ -54,8 +57,8 @@ public class CustomerController implements Initializable {
     }
 
     private void loadData() {
-        connection = database.connectionDb();
-        String Infor_ID_Khachhang = HelloController.getID_Customer();
+        connection = Database.connectionDB();
+        String Infor_ID_Khachhang = InformationPassengerController.getID_Customer();
         query = "SELECT khach_hang.ID_Khachhang," +
                 "    khach_hang.Ten,\n" +
                 "    khach_hang.CCCD,\n" +

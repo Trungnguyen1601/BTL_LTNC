@@ -16,6 +16,15 @@ public class Passenger {
     private String Level;
     private Button deleteButton;
     private Button inforButton;
+    private Account account;
+
+    public Passenger(String ID_Passenger, String ho_va_Ten, String phone,Account account, String email) {
+        this.ID_Passenger = ID_Passenger;
+        this.ho_va_Ten = ho_va_Ten;
+        this.phone = phone;
+        this.email = email;
+        this.account = account;
+    }
 
     public Button getDeleteButton() {
         return deleteButton;
@@ -118,4 +127,11 @@ public class Passenger {
     public void setLevel(String level) {
         Level = level;
     }
+    public String getUsername() {
+        return account.getUsername();
+    }
+    public String getPassword() {
+        return account.getPassword();
+    }
+
 }
