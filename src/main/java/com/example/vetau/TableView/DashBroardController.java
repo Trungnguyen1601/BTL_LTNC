@@ -68,9 +68,6 @@ public class DashBroardController implements Initializable {
     private TextField tau_id;
     @FXML
     private Button train_form_btn;
-
-    @FXML
-    private Button dashbroard_phongto;
     @FXML
     private Button update_btn_id;
     @FXML
@@ -242,8 +239,6 @@ public class DashBroardController implements Initializable {
         chuyentauList.clear();
         Combobox_gadi();
         Combobox_gaden();
-        gadi_id.setText(null);
-        gaden_id.setText(null);
         giodi_id.setText(null);
         Ngaydi_id.setValue(null);
         Ngayden_id.setValue(null);

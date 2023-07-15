@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="810.0" styleClass="bg-form" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetau.Main.MainController">
     <children>
-        <AnchorPane fx:id="signin_form" layoutX="327.0" prefHeight="650.0" prefWidth="483.0" style="-fx-background-color: d3edff;" stylesheets="@login.css" visible="false">
+        <AnchorPane fx:id="signin_form" layoutX="327.0" prefHeight="650.0" prefWidth="483.0" style="-fx-background-color: d3edff;" stylesheets="@login.css">
             <children>
                 <Button fx:id="signin_close" layoutX="432.0" layoutY="2.0" mnemonicParsing="false" onAction="#signin_close" prefHeight="24.0" prefWidth="51.0" styleClass="close" stylesheets="@login.css">
                <graphic>
@@ -53,7 +53,7 @@
             <FontAwesomeIcon glyphName="LOCK" layoutX="112.0" layoutY="406.0" size="1.6em" />
             </children>
         </AnchorPane>
-      <AnchorPane layoutX="-3.0" prefHeight="650.0" prefWidth="332.0" style="-fx-background-color: #ffd5d3;" visible="false">
+      <AnchorPane layoutX="-3.0" prefHeight="650.0" prefWidth="332.0" style="-fx-background-color: #ffd5d3;">
          <children>
             <ImageView fitHeight="197.0" fitWidth="263.0" layoutX="34.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -62,7 +62,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-        <AnchorPane fx:id="signup_form" prefHeight="650.0" prefWidth="810.0" style="-fx-background-color: #d3edff;">
+        <AnchorPane fx:id="signup_form" prefHeight="650.0" prefWidth="810.0" style="-fx-background-color: #d3edff;" visible="false">
             <children>
                 <Button fx:id="signup_minimize" layoutX="698.0" layoutY="2.0" mnemonicParsing="false" onAction="#signup_minimize" prefHeight="24.0" prefWidth="51.0" styleClass="minimize" stylesheets="@login.css">
                     <graphic>

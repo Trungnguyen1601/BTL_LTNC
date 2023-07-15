@@ -126,11 +126,7 @@ public class MainController {
             {
                 Flag_Insert = true;
             }
-
-
-
-
-        }catch (Exception e)
+        } catch (Exception e)
         {
             e.printStackTrace();
         }
