@@ -234,11 +234,22 @@ public class InformationPassengerController implements Initializable {
         stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
         stage_quanlytau.setTitle("Quan lý tàu");
         stage_quanlytau.setScene(scene_quanlytau);
-
         stage_quanlytau.show();
         stage_dashbroard.close();
     }
 
+    @FXML
+    void Switch_train_form(MouseEvent event) throws IOException {
+        stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+        Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/dashbroard.fxml"));
+        Scene scene_quanlytau = new Scene(root2);
+        stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
+        stage_quanlytau.setTitle("Quan lý tàu");
+        stage_quanlytau.setScene(scene_quanlytau);
+        stage_quanlytau.show();
+        stage_dashbroard.close();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

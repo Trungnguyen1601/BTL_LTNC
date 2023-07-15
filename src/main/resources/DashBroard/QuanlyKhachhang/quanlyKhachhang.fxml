@@ -59,7 +59,7 @@
                                 <FontAwesomeIcon glyphName="EYE" />
                             </graphic>
                         </Button>
-                        <Button fx:id="train_form_btn" layoutX="33.0" layoutY="389.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="Quản lý chuyến tàu">
+                        <Button fx:id="train_form_btn" layoutX="33.0" layoutY="389.0" mnemonicParsing="false" onMouseClicked="#Switch_train_form" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="Quản lý chuyến tàu">
                             <graphic>
                                 <FontAwesomeIcon glyphName="EDIT" />
                             </graphic>
