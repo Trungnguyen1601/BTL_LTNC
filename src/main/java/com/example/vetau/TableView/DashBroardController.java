@@ -117,8 +117,6 @@ public class DashBroardController implements Initializable {
     @FXML
     private TextField cccd_passenger_id;
     @FXML
-    private Label chucnang_id1;
-    @FXML
     private Button clear_btn_passenger;
     @FXML
     private TextField email_passenger_id;
@@ -585,7 +583,6 @@ public class DashBroardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        chucnang_id.setText("Trung đẹp trai");
         loadData();
 
     }

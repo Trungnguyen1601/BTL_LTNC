@@ -190,7 +190,10 @@ public class InformationPassengerController implements Initializable {
     private void Delete_inDB(String ID)
     {
 
-        query = "DELETE FROM khach_hang WHERE ID_Khachhang = ?";
+        query = "DELETE khach_hang, account_user \n" +
+                "\tFROM khach_hang \n" +
+                "    INNER JOIN account_user ON khach_hang.ID_Account = account_user.ID_Account \n" +
+                "    WHERE khach_hang.ID_Khachhang = ?";
         try {
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1,ID);
