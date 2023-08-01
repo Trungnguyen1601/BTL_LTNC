@@ -20,6 +20,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class QuanLyTauController implements Initializable {
@@ -101,8 +102,7 @@ public class QuanLyTauController implements Initializable {
 
     @FXML
     private Button train_mana_form_btn;
-
-
+    private Alert alert;
     String query = null;
     Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -407,6 +407,30 @@ public class QuanLyTauController implements Initializable {
     public void Insert_Tau()
     {
 
+    }
+
+    public  void  logout() {
+        try {
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Bạn xác nhận muốn đăng xuất?");
+            Optional<ButtonType> option = alert.showAndWait();
+
+            if (option.get().equals(ButtonType.OK)) {
+                /* TO HIDE MAIN FORM */
+                signout_btn.getScene().getWindow().hide();
+                /* LINK YOUR LOGIN FORM AND SHOW IT */
+                Parent root_logout = FXMLLoader.load(getClass().getResource("/Main/login-view.fxml"));
+                Stage stage_logout = new Stage();
+                Scene scene_logout = new Scene(root_logout);
+                stage_logout.initStyle(StageStyle.TRANSPARENT);
+                stage_logout.setScene(scene_logout);
+                stage_logout.show();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class DashBroardController implements Initializable {
@@ -134,6 +135,7 @@ public class DashBroardController implements Initializable {
     private Button search_btn_passenger;
     @FXML
     private Button update_btn_passenger;
+    private Alert alert;
     String query = null;
     Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -579,6 +581,30 @@ public class DashBroardController implements Initializable {
 
         stage_quanlytau.show();
         stage_dashbroard.close();
+    }
+
+    public  void  logout() {
+        try {
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Bạn xác nhận muốn đăng xuất?");
+            Optional<ButtonType> option = alert.showAndWait();
+
+            if (option.get().equals(ButtonType.OK)) {
+                /* TO HIDE MAIN FORM */
+                signout_btn.getScene().getWindow().hide();
+                /* LINK YOUR LOGIN FORM AND SHOW IT */
+                Parent root_logout = FXMLLoader.load(getClass().getResource("/Main/login-view.fxml"));
+                Stage stage_logout = new Stage();
+                Scene scene_logout = new Scene(root_logout);
+                stage_logout.initStyle(StageStyle.TRANSPARENT);
+                stage_logout.setScene(scene_logout);
+                stage_logout.show();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

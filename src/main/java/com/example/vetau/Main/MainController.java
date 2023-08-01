@@ -231,6 +231,7 @@ public class MainController {
                      alert.setHeaderText(null);
                      alert.setContentText("Successfully login");
                      alert.showAndWait();
+                    signin_btn_login.getScene().getWindow().hide();
 
                     Parent root1 = FXMLLoader.load(getClass().getResource("/DashBroard/dashbroard.fxml"));
 

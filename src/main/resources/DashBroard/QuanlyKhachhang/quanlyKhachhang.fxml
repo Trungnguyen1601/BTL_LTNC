@@ -69,7 +69,7 @@
                                 <FontAwesomeIcon glyphName="BOOK" />
                             </graphic>
                         </Button>
-                        <Button layoutX="32.0" layoutY="660.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="Đăng xuất">
+                        <Button fx:id="signout_btn" layoutX="32.0" layoutY="660.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="36.0" prefWidth="226.0" styleClass="nav-btn" stylesheets="@custormer.css" text="Đăng xuất">
                             <font>
                                 <Font name="System Bold" size="16.0" />
                             </font>

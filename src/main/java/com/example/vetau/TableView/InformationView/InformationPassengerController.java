@@ -25,40 +25,34 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class InformationPassengerController implements Initializable {
-
     @FXML
     private Button dashbroard_form_btn;
-
     @FXML
     private Button quanlytau_form_btn;
     @FXML
     private Button train_form_btn;
     @FXML
+    private Button signout_btn;
+    @FXML
     private TextField search_customer_txt ;
     @FXML
     private TableView<Passenger> Customer_Table;
-
     @FXML
     private TableColumn<Passenger, String> Email;
-
     @FXML
     private TableColumn<Passenger, String> ID_Khachhang;
-
     @FXML
     private TableColumn<Passenger, String> Name;
-
     @FXML
     private TableColumn<Passenger, String> Password;
-
     @FXML
     private TableColumn<Passenger, String> PhoneNumber;
-
     @FXML
     private TableColumn<Passenger, String> Username;
-
     @FXML
     private Button dashboard_close;
     @FXML
@@ -67,6 +61,7 @@ public class InformationPassengerController implements Initializable {
     private TableColumn<Passenger, Button> Delete_Col;
     @FXML
     private TableColumn<Passenger, Button> Infor_Col;
+    private Alert alert;
     String query = null;
     Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -79,7 +74,6 @@ public class InformationPassengerController implements Initializable {
     public static String getID_Customer() {
         return ID_Customer;
     }
-
     ObservableList<Passenger> CustomerList = FXCollections.observableArrayList();
 
     @FXML
@@ -252,6 +246,30 @@ public class InformationPassengerController implements Initializable {
         stage_quanlytau.setScene(scene_quanlytau);
         stage_quanlytau.show();
         stage_dashbroard.close();
+    }
+
+    public  void  logout() {
+        try {
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Bạn xác nhận muốn đăng xuất?");
+            Optional<ButtonType> option = alert.showAndWait();
+
+            if (option.get().equals(ButtonType.OK)) {
+                /* TO HIDE MAIN FORM */
+                signout_btn.getScene().getWindow().hide();
+                /* LINK YOUR LOGIN FORM AND SHOW IT */
+                Parent root_logout = FXMLLoader.load(getClass().getResource("/Main/login-view.fxml"));
+                Stage stage_logout = new Stage();
+                Scene scene_logout = new Scene(root_logout);
+                stage_logout.initStyle(StageStyle.TRANSPARENT);
+                stage_logout.setScene(scene_logout);
+                stage_logout.show();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

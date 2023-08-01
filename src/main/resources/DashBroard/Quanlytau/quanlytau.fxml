@@ -74,7 +74,7 @@
                                 <FontAwesomeIcon glyphName="BOOK" />
                             </graphic>
                         </Button>
-                        <Button fx:id="signout_btn" layoutX="16.0" layoutY="619.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="177.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="Đăng xuất">
+                        <Button fx:id="signout_btn" layoutX="16.0" layoutY="619.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="28.0" prefWidth="177.0" styleClass="nav-btn" stylesheets="@../DesignDashBroard.css" text="Đăng xuất">
                      <graphic>
                               <FontAwesomeIcon glyphName="SIGN_OUT" size="1.4em" text="" />
                      </graphic></Button>
