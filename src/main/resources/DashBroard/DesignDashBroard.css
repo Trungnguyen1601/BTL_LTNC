@@ -98,8 +98,8 @@
     -fx-font-size: 14px;
 }
 .add_textfield:focused {
-    -fx-border-color:#ae2d3c;
-    -fx-border-width: 5px;
+    -fx-border-color:#35529d;
+    -fx-border-width: 2px;
 }
 .insert_btn{
     -fx-background-color:#3150a1;
@@ -150,16 +150,16 @@
 
 .search{
     -fx-background-color:#fff;
-    -fx-background-radius:0px 10px 0px 0px;
+    -fx-background-radius:0px 5px 0px 0px;
     -fx-border-color:#1e242e;
     -fx-border-width:1px;
     -fx-font-size:14px;
-    -fx-border-radius:0px 10px 0px 0px;
+    -fx-border-radius:0px 5px 0px 0px;
     -fx-padding: 0px 0px 10px;
 }
 
 .search:focused{
-    -fx-border-color:#ae2d3c;
+    -fx-border-color:#35529d;
     -fx-border-width:2px;
 }
 

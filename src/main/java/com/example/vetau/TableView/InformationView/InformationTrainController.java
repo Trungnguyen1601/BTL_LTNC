@@ -170,9 +170,7 @@ public class InformationTrainController implements Initializable {
                 "Gio_di = ?, \n"+
                 "Ngay_di = ?, \n" +
                 "Ngay_den = ? \n" +
-
                 "WHERE ID_Chuyentau = ?";
-
         try {
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, chuyentau.getGadi().getID_Gatau());
@@ -183,7 +181,6 @@ public class InformationTrainController implements Initializable {
             preparedStatement.setDate(6, (Date) chuyentau.getNgayden());
             preparedStatement.setString(7,Train_id_edit);
             preparedStatement.executeUpdate();
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -198,19 +195,12 @@ public class InformationTrainController implements Initializable {
             // Lấy dữ liệu từ cơ sở dữ liệu và thêm vào combobox
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-//                    System.out.println(resultSet.getInt("idTau"));
                 String ID_Gatau = resultSet.getString("ID_Gatau");
                 String Gatau  = resultSet.getString("Ten_Gatau");
                 String Dia_diem = resultSet.getString("Dia_diem");
                 ga_tau = new Ga_tau(ID_Gatau,Gatau,Dia_diem);
                 gadi_edit_combo.getItems().add(ga_tau);
             }
-
-            // Xử lý sự kiện khi combobox được chọn
-//            gadi_id_combox.setOnAction(event -> {
-//                String selectedTrain = gadi_id_combox.getValue();
-//
-//            });
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -225,7 +215,6 @@ public class InformationTrainController implements Initializable {
             // Lấy dữ liệu từ cơ sở dữ liệu và thêm vào combobox
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-//                    System.out.println(resultSet.getInt("idTau"));
                 String ID_Gatau = resultSet.getString("ID_Gatau");
                 String Gatau  = resultSet.getString("Ten_Gatau");
                 String Dia_diem = resultSet.getString("Dia_diem");
@@ -247,26 +236,18 @@ public class InformationTrainController implements Initializable {
             // Lấy dữ liệu từ cơ sở dữ liệu và thêm vào combobox
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-//                    System.out.println(resultSet.getInt("idTau"));
                 String ID_Tau = resultSet.getString("ID_Tau");
                 int Soluongtoa = resultSet.getInt("Soluongtoa");
 
                 Tau tau = new Tau(ID_Tau,Soluongtoa);
                 tau_edit_combo.getItems().add(tau);
             }
-
-            // Xử lý sự kiện khi combobox được chọn
-//            gadi_id_combox.setOnAction(event -> {
-//                String selectedTrain = gadi_id_combox.getValue();
-//
-//            });
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
     public void Start()
     {
-
         connection = Database.connectionDB();
         Combobox_gadi_edit();
         Combobox_gaden_edit();
@@ -295,16 +276,10 @@ public class InformationTrainController implements Initializable {
                 idTau_infor_text.setText(resultSet.getString("ID_taudi"));
                 diemdi_infor_id.setText(resultSet.getString("DiaDiem_gadi"));
                 diemden_infor_id.setText(resultSet.getString("DiaDiem_gaden"));
-
-
             }
-
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
     public void Get_Edit_Train()

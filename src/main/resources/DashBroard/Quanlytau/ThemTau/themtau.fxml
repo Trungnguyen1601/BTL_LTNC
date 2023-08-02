@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="797.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="66.0" layoutY="14.0" prefHeight="684.0" prefWidth="797.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -34,7 +33,7 @@
                   <Label fx:id="TauAdd" layoutX="33.0" layoutY="65.0" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="121.0" prefHeight="612.0" prefWidth="798.0" styleClass="bg-form">
+            <AnchorPane layoutY="121.0" prefHeight="612.0" prefWidth="798.0" style="-fx-background-color: #ffd5d3;" styleClass="bg-form">
                <stylesheets>
                   <URL value="@Themtau.css" />
                   <URL value="@giaodien.css" />
@@ -44,15 +43,15 @@
                     <columns>
                       <TableColumn fx:id="Toa_add_col" prefWidth="272.00001215934753" text="Toa" />
                       <TableColumn fx:id="Soluongghe_add_coll" prefWidth="249.5999755859375" text="Số lượng ghế" />
-                        <TableColumn fx:id="Loaitoa_add_col" prefWidth="263.199951171875" text="Loại toa" />
+                        <TableColumn fx:id="Loaitoa_add_col" prefWidth="274.0" text="Loại toa" />
                     </columns>
                   </TableView>
-                  <Button fx:id="Tau_add_OK_btn" layoutX="359.0" layoutY="535.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="67.0" text="OK" textAlignment="CENTER">
+                  <Button fx:id="Tau_add_OK_btn" layoutX="354.0" layoutY="533.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" text="OK" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Tau_add_Cancle_btn" layoutX="687.0" layoutY="535.0" mnemonicParsing="false" text="Cancle">
+                  <Button fx:id="Tau_add_Cancle_btn" layoutX="687.0" layoutY="535.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" text="Cancel">
                      <font>
                         <Font size="19.0" />
                      </font>

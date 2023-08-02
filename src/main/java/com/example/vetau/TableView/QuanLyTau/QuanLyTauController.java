@@ -3,9 +3,12 @@ package com.example.vetau.TableView.QuanLyTau;
 import com.example.vetau.Show.Button_Extend;
 import com.example.vetau.helpers.Database;
 import com.example.vetau.models.ChitietTau;
+import com.example.vetau.models.Passenger;
 import com.example.vetau.models.Tau;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -24,6 +27,8 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class QuanLyTauController implements Initializable {
+    @FXML
+    private TextField search_tau_txt;
 
     @FXML
     private TableColumn<ChitietTau, Button> Delete_col;
@@ -227,12 +232,11 @@ public class QuanLyTauController implements Initializable {
 //                        } catch (IOException e) {
 //                            throw new RuntimeException(e);
 //                        }
-
-                        // Gọi phương thức sửa thông tin sinh viên từ MySQL tại đây
                     });
                 }
             }
         });
+        searchTrain_txt();
     }
     public void RefreshTable()
     {
@@ -407,6 +411,32 @@ public class QuanLyTauController implements Initializable {
     public void Insert_Tau()
     {
 
+    }
+
+    private void searchTrain_txt() {
+        FilteredList<ChitietTau> filteredList = new FilteredList<>(TauList, b -> true);
+        search_tau_txt.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredList.setPredicate(tau -> {
+                if (newValue == null || newValue.isEmpty() || newValue.isBlank()) {
+                    return true;
+                }
+                String lowerCaseFilter = newValue.toLowerCase();
+                if (tau.getID_Tau().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+//                } else if (customerInformation.getEmail().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+//                    return true;
+//                } else if (customerInformation.getUsername().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+//                    return true;
+//                } else if (customerInformation.getPhone().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+//                    return true;
+                } else {
+                    return false;
+                }
+            });
+        });
+        SortedList<ChitietTau> sortedList = new SortedList<>(filteredList);
+        sortedList.comparatorProperty().bind(Tau_table.comparatorProperty());
+        Tau_table.setItems(sortedList);
     }
 
     public  void  logout() {
