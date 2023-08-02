@@ -181,19 +181,27 @@ public class InformationPassengerController implements Initializable {
 
     }
 
-    private void Delete_inDB(String ID)
-    {
+    private void Delete_inDB(String ID) {
 
         query = "DELETE khach_hang, account_user \n" +
                 "\tFROM khach_hang \n" +
                 "    INNER JOIN account_user ON khach_hang.ID_Account = account_user.ID_Account \n" +
                 "    WHERE khach_hang.ID_Khachhang = ?";
-        try {
-            preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1,ID);
-            int check = preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Error Message");
+        alert.setHeaderText(null);
+        alert.setContentText("Bạn xác nhận muốn xóa?");
+        Optional<ButtonType> option = alert.showAndWait();
+        if (option.get().equals(ButtonType.OK)) {
+            try {
+                preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, ID);
+                int check = preparedStatement.executeUpdate();
+            } catch(SQLException e){
+                throw new RuntimeException(e);
+            }
+        } else {
+            refreshTable();
         }
     }
 
