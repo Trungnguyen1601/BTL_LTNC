@@ -38,7 +38,7 @@
                     </font>
                 </Button>
                 <Hyperlink fx:id="signin_creataccount" layoutX="200.0" layoutY="558.0" onAction="#switchForm" styleClass="hyberlink" stylesheets="@login.css" text="Tạo khách hàng mới" />
-            <Hyperlink fx:id="signin_forgetpassword" layoutX="114.0" layoutY="432.0" styleClass="hyberlink" stylesheets="@login.css" text="Quên mật khẩu" />
+            <Hyperlink fx:id="signin_forgetpassword" layoutX="114.0" layoutY="432.0" onMouseClicked="#signin_forgetpassword" styleClass="hyberlink" stylesheets="@login.css" text="Quên mật khẩu" />
             <Label layoutX="167.0" layoutY="89.0" text="Welcome">
                <font>
                   <Font name="System Bold" size="40.0" />

@@ -151,7 +151,7 @@ public class DashBroardController implements Initializable {
         return Train_id;
     }
 
-    Stage stage_dashbroard, stage_quanlytau = new Stage();
+    Stage stage_dashbroard, stage_quanlytau, stage_quanlykhachhang = new Stage();
 
     Parent root2;
 
@@ -562,7 +562,7 @@ public class DashBroardController implements Initializable {
         Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/Quanlytau/quanlytau.fxml"));
         Scene scene_quanlytau = new Scene(root2);
         stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-        stage_quanlytau.setTitle("Quan lý tàu");
+//        stage_quanlytau.setTitle("Quan lý tàu");
         stage_quanlytau.setScene(scene_quanlytau);
 
         stage_quanlytau.show();
@@ -574,12 +574,12 @@ public class DashBroardController implements Initializable {
         stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 
         Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/QuanlyKhachhang/quanlyKhachhang.fxml"));
-        Scene scene_quanlytau = new Scene(root2);
-        stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-        stage_quanlytau.setTitle("Quan lý tàu");
-        stage_quanlytau.setScene(scene_quanlytau);
+        Scene scene_quanlykhachhang = new Scene(root2);
+        stage_quanlykhachhang.initStyle(StageStyle.TRANSPARENT);
+//        stage_quanlykhachhang.setTitle("Quan lý khách hàng");
+        stage_quanlykhachhang.setScene(scene_quanlykhachhang);
 
-        stage_quanlytau.show();
+        stage_quanlykhachhang.show();
         stage_dashbroard.close();
     }
 

@@ -237,7 +237,7 @@ public class InformationPassengerController implements Initializable {
         Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/Quanlytau/quanlytau.fxml"));
         Scene scene_quanlytau = new Scene(root2);
         stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-        stage_quanlytau.setTitle("Quan lý tàu");
+//        stage_quanlytau.setTitle("Quan lý tàu");
         stage_quanlytau.setScene(scene_quanlytau);
         stage_quanlytau.show();
         stage_dashbroard.close();
@@ -250,7 +250,7 @@ public class InformationPassengerController implements Initializable {
         Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/dashbroard.fxml"));
         Scene scene_quanlytau = new Scene(root2);
         stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-        stage_quanlytau.setTitle("Quan lý tàu");
+//        stage_quanlytau.setTitle("Quan lý tàu");
         stage_quanlytau.setScene(scene_quanlytau);
         stage_quanlytau.show();
         stage_dashbroard.close();

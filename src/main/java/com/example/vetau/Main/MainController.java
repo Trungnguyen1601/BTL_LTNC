@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -79,6 +80,7 @@ public class MainController {
     private TextField signup_email;
     @FXML
     private Hyperlink signin_forgetpassword;
+    Stage stage_main, stage_forgotPass = new Stage();
 
     // TOOLs FOR DATABASE
     private Connection connection;
@@ -285,6 +287,19 @@ public class MainController {
     {
         Stage stage = (Stage) signup_form.getScene().getWindow();
         stage.setIconified(true);
+    }
+
+    @FXML
+    void signin_forgetpassword(MouseEvent event) throws IOException {
+        stage_main =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+        Parent root = FXMLLoader.load(getClass().getResource("/Main/forgot_Password.fxml"));
+        Scene scene_forgotPassword = new Scene(root);
+        stage_forgotPass.initStyle(StageStyle.TRANSPARENT);
+        stage_forgotPass.setScene(scene_forgotPassword);
+
+        stage_forgotPass.show();
+        stage_main.close();
     }
     public void initialize(URL url, ResourceBundle rb)
     {
