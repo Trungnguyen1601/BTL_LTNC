@@ -138,11 +138,11 @@
                                     <TableColumn fx:id="gadi_col" prefWidth="102.39996337890625" text="Ga đi" />
                                     <TableColumn fx:id="gaden_col" prefWidth="102.4000244140625" text="Ga đến" />
                                     <TableColumn fx:id="tau_col" prefWidth="104.80001831054688" text="Tàu" />
-                                    <TableColumn fx:id="ngaydi_col" prefWidth="93.60003662109375" text="Ngày đi" />
-                                    <TableColumn fx:id="giodi_col" prefWidth="100.7999267578125" text="Giờ đi" />
-                                    <TableColumn fx:id="ngayden_col" minWidth="0.0" prefWidth="99.9998779296875" text="Ngày đến" />
-                                    <TableColumn fx:id="Update_col" minWidth="0.0" prefWidth="104.0001220703125" />
-                                    <TableColumn fx:id="Delete_col" minWidth="0.0" prefWidth="103.2000732421875" />
+                                    <TableColumn fx:id="ngaydi_col" prefWidth="140.0" text="Ngày đi" />
+                                    <TableColumn fx:id="giodi_col" prefWidth="74.0" text="Giờ đi" />
+                                    <TableColumn fx:id="ngayden_col" minWidth="0.0" prefWidth="140.0" text="Ngày đến" />
+                                    <TableColumn fx:id="Update_col" minWidth="0.0" prefWidth="86.0" />
+                                    <TableColumn fx:id="Delete_col" minWidth="0.0" prefWidth="87.0" />
                                  </columns>
                               </TableView>
                            </children>

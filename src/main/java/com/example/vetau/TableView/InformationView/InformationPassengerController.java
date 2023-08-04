@@ -258,7 +258,7 @@ public class InformationPassengerController implements Initializable {
 
     public  void  logout() {
         try {
-            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Error Message");
             alert.setHeaderText(null);
             alert.setContentText("Bạn xác nhận muốn đăng xuất?");
@@ -274,6 +274,9 @@ public class InformationPassengerController implements Initializable {
                 stage_logout.initStyle(StageStyle.TRANSPARENT);
                 stage_logout.setScene(scene_logout);
                 stage_logout.show();
+            }
+            else {
+                refreshTable();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

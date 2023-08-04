@@ -253,7 +253,6 @@ public class InformationTrainController implements Initializable {
         Combobox_gaden_edit();
         Combobox_tau_edit();
         String Train_ID_infor = DashBroardController.getTrain_id();
-        System.out.println("Thong tin xem la " + Train_ID_infor);
         query = "SELECT c.ID_Chuyentau,\n" +
                 "      g1.Ten_Gatau AS TenGaDi,g1.Dia_diem as DiaDiem_gadi,\n" +
                 "      g2.Ten_Gatau AS TenGaDen,g2.Dia_diem as DiaDiem_gaden,\n" +

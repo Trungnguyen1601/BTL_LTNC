@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vetau.TableView.InformationView.InformationTrainController">
    <children>
-      <AnchorPane fx:id="Infor_form" prefHeight="600.0" prefWidth="650.0" styleClass="bg-form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="Infor_form" prefHeight="600.0" prefWidth="650.0" styleClass="bg-form" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane prefHeight="88.0" prefWidth="659.0" styleClass="bg-white" stylesheets="@../DesignDashBroard.css">
                <children>
@@ -98,70 +98,77 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="Edit_form" layoutX="75.0" layoutY="94.0" prefHeight="605.4" prefWidth="650.4" styleClass="bg-form" stylesheets="@control.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="Edit_form" layoutX="75.0" layoutY="94.0" prefHeight="600.0" prefWidth="650.0" styleClass="bg-form" stylesheets="@control.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="87.0" prefWidth="650.0" styleClass="bg-form" stylesheets="@../control.css">
-               <children>
-                  <Label layoutX="198.0" layoutY="24.0" text="Sửa thông tin chuyến tàu" textFill="#fffefe">
-                     <font>
-                        <Font name="MS Outlook" size="23.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="Edit_close_btn" layoutX="597.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#setEdit_close_btn" prefHeight="24.0" prefWidth="52.0" styleClass="close" stylesheets="@../control.css">
-                     <graphic>
-                        <FontAwesomeIcon glyphName="CLOSE" />
-                     </graphic>
-                  </Button>
-                  <Button fx:id="edit_minus_btn" layoutX="545.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#setedit_minus_btn" prefHeight="24.0" prefWidth="52.0" styleClass="minimize" stylesheets="@../control.css">
-                     <graphic>
-                        <FontAwesomeIcon glyphName="MINUS" />
-                     </graphic>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutY="88.0" prefHeight="518.0" prefWidth="644.0" styleClass="bg-form">
+            <AnchorPane layoutY="88.0" prefHeight="518.0" prefWidth="659.0" style="-fx-background-color: pink;" styleClass="bg-form">
                <children>
                   <TextField fx:id="giodi_edit_text" layoutX="111.0" layoutY="117.0" prefHeight="35.0" prefWidth="209.0" />
-                  <TextField fx:id="soluongtoa_edit_text" layoutX="111.0" layoutY="259.0" prefHeight="35.0" prefWidth="209.0" />
-                  <Button fx:id="OK_edit_btn" layoutX="284.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#setOK" prefHeight="46.0" prefWidth="75.0" styleClass="update_btn" text="OK">
+                  <TextField fx:id="soluongtoa_edit_text" layoutX="416.0" layoutY="350.0" prefHeight="35.0" prefWidth="209.0" />
+                  <Button fx:id="OK_edit_btn" layoutX="284.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#setOK" prefHeight="46.0" prefWidth="98.0" styleClass="update_btn" text="OK">
                      <stylesheets>
                         <URL value="@../control.css" />
                         <URL value="@../DesignDashBroard.css" />
                      </stylesheets>
                   </Button>
-                  <ComboBox fx:id="tau_edit_combo" layoutX="111.0" layoutY="191.0" prefHeight="35.0" prefWidth="210.0" />
-                  <Label layoutX="61.0" layoutY="58.0" text="Ga đi" textFill="#fffefe" />
-                  <Label layoutX="340.0" layoutY="58.0" text="Ga đến" textFill="WHITE" />
-                  <Label layoutX="59.0" layoutY="126.0" text="Giờ đi" textFill="#fafafa" />
-                  <Label layoutX="65.0" layoutY="200.0" text="Tàu" textFill="#fafafa" />
-                  <Label layoutX="30.0" layoutY="268.0" text="Số lượng toa" textFill="#fafafa" />
+                  <ComboBox fx:id="tau_edit_combo" layoutX="416.0" layoutY="283.0" prefHeight="35.0" prefWidth="210.0" />
+                  <Label layoutX="61.0" layoutY="58.0" text="Ga đi">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="340.0" layoutY="58.0" text="Ga đến">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="59.0" layoutY="126.0" text="Giờ đi">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="315.0" layoutY="292.0" text="Tàu">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="281.0" layoutY="355.0" prefHeight="24.0" prefWidth="104.0" text="Số lượng toa" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font></Label>
                   <ComboBox fx:id="gadi_edit_combo" layoutX="111.0" layoutY="49.0" prefHeight="35.0" prefWidth="210.0" />
-                  <ComboBox fx:id="gaden_edit_combo" layoutX="392.0" layoutY="49.0" prefHeight="35.0" prefWidth="210.0" />
-                  <DatePicker fx:id="ngaydi_edit_date" layoutX="392.0" layoutY="117.0" prefHeight="35.0" prefWidth="210.0" />
-                  <DatePicker fx:id="ngayden_edit_date" layoutX="392.0" layoutY="191.0" prefHeight="35.0" prefWidth="210.0" />
-                  <Label layoutX="338.0" layoutY="126.0" text="Ngày đi" textFill="#fafafa" />
-                  <Label layoutX="333.0" layoutY="200.0" text="Ngày đến" textFill="#fafafa" />
+                  <ComboBox fx:id="gaden_edit_combo" layoutX="415.0" layoutY="50.0" prefHeight="35.0" prefWidth="210.0" />
+                  <DatePicker fx:id="ngaydi_edit_date" layoutX="415.0" layoutY="127.0" prefHeight="35.0" prefWidth="210.0" />
+                  <DatePicker fx:id="ngayden_edit_date" layoutX="415.0" layoutY="191.0" prefHeight="35.0" prefWidth="210.0" />
+                  <Label layoutX="338.0" layoutY="126.0" text="Ngày đi">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="333.0" layoutY="200.0" text="Ngày đến">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font></Label>
+                  <FontAwesomeIcon glyphName="" layoutX="99.0" layoutY="372.0" />
                </children>
                <stylesheets>
                   <URL value="@../DesignDashBroard.css" />
                   <URL value="@control.css" />
                </stylesheets>
             </AnchorPane>
-            <Label layoutX="240.0" layoutY="26.0" text="SỬA THÔNG TIN" textFill="WHITE">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-            <Button layoutX="599.0" layoutY="2.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="52.0">
-               <graphic>
-                  <FontAwesomeIcon glyphName="CLOSE" />
-               </graphic>
-            </Button>
-            <Button layoutX="547.0" layoutY="2.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="52.0">
-               <graphic>
-                  <FontAwesomeIcon glyphName="MINUS" />
-               </graphic>
-            </Button>
+            <AnchorPane prefHeight="87.0" prefWidth="659.0" style="-fx-background-color: white;" styleClass="bg-form" stylesheets="@../control.css">
+               <children>
+                  <Label layoutX="198.0" layoutY="24.0" text="Sửa thông tin chuyến tàu">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="Edit_close_btn" layoutX="607.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#setEdit_close_btn" prefHeight="24.0" prefWidth="52.0" styleClass="close" stylesheets="@../control.css">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="CLOSE" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="edit_minus_btn" layoutX="555.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#setedit_minus_btn" prefHeight="24.0" prefWidth="52.0" styleClass="minimize" stylesheets="@../control.css">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="MINUS" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
