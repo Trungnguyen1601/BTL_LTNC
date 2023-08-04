@@ -67,7 +67,7 @@ public class InformationPassengerController implements Initializable {
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
     Passenger customerInformation = null;
-    Stage stage_dashbroard, stage_quanlytau = new Stage();
+    Stage stage_dashbroard, stage_quanlytau, stage_quanlychuyentau = new Stage();
 
     private static String ID_Customer;
 
@@ -151,14 +151,14 @@ public class InformationPassengerController implements Initializable {
         Account account = new Account();
         try {
             query = "SELECT \n" +
-                    "khach_hang.Ten,\n" +
-                    "khach_hang.ID_Khachhang,\n" +
-                    "khach_hang.Email,\n" +
+                    "    khach_hang.Ten,\n" +
+                    "    khach_hang.ID_Khachhang,\n" +
+                    "    khach_hang.Email,\n" +
                     "    khach_hang.SDT,\n" +
                     "    account_user.ID_Account,\n" +
                     "    account_user.Username,\n" +
                     "    account_user.Password\n" +
-                    "\tFrom khach_hang\n" +
+                    "    From khach_hang\n" +
                     "    inner join account_user on khach_hang.ID_Account = account_user.ID_Account";
 
             preparedStatement = connection.prepareStatement(query);
@@ -237,7 +237,6 @@ public class InformationPassengerController implements Initializable {
         Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/Quanlytau/quanlytau.fxml"));
         Scene scene_quanlytau = new Scene(root2);
         stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-//        stage_quanlytau.setTitle("Quan lý tàu");
         stage_quanlytau.setScene(scene_quanlytau);
         stage_quanlytau.show();
         stage_dashbroard.close();
@@ -248,11 +247,10 @@ public class InformationPassengerController implements Initializable {
         stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 
         Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/dashbroard.fxml"));
-        Scene scene_quanlytau = new Scene(root2);
-        stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-//        stage_quanlytau.setTitle("Quan lý tàu");
-        stage_quanlytau.setScene(scene_quanlytau);
-        stage_quanlytau.show();
+        Scene scene_quanlychuyentau = new Scene(root2);
+        stage_quanlychuyentau.initStyle(StageStyle.TRANSPARENT);
+        stage_quanlychuyentau.setScene(scene_quanlychuyentau);
+        stage_quanlychuyentau.show();
         stage_dashbroard.close();
     }
 
