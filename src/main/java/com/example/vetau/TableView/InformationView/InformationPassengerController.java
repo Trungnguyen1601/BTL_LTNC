@@ -259,7 +259,7 @@ public class InformationPassengerController implements Initializable {
             alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Error Message");
             alert.setHeaderText(null);
-            alert.setContentText("Bạn xác nhận muốn đăng xuất?");
+            alert.setContentText("Are you sure you want to logout?");
             Optional<ButtonType> option = alert.showAndWait();
 
             if (option.get().equals(ButtonType.OK)) {

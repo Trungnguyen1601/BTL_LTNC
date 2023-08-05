@@ -562,7 +562,6 @@ public class DashBroardController implements Initializable {
         Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/Quanlytau/quanlytau.fxml"));
         Scene scene_quanlytau = new Scene(root2);
         stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-//        stage_quanlytau.setTitle("Quan lý tàu");
         stage_quanlytau.setScene(scene_quanlytau);
 
         stage_quanlytau.show();
@@ -576,7 +575,6 @@ public class DashBroardController implements Initializable {
         Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/QuanlyKhachhang/quanlyKhachhang.fxml"));
         Scene scene_quanlykhachhang = new Scene(root2);
         stage_quanlykhachhang.initStyle(StageStyle.TRANSPARENT);
-//        stage_quanlykhachhang.setTitle("Quan lý khách hàng");
         stage_quanlykhachhang.setScene(scene_quanlykhachhang);
 
         stage_quanlykhachhang.show();
@@ -588,7 +586,7 @@ public class DashBroardController implements Initializable {
             alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Error Message");
             alert.setHeaderText(null);
-            alert.setContentText("Bạn xác nhận muốn đăng xuất?");
+            alert.setContentText("Are you sure you want to logout?");
             Optional<ButtonType> option = alert.showAndWait();
 
             if (option.get().equals(ButtonType.OK)) {
