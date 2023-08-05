@@ -558,26 +558,27 @@ public class DashBroardController implements Initializable {
     @FXML
     void Switch_quanlytau(MouseEvent event) throws IOException {
         stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-
-        Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/Quanlytau/quanlytau.fxml"));
-        Scene scene_quanlytau = new Scene(root2);
-        stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-        stage_quanlytau.setScene(scene_quanlytau);
-
-        stage_quanlytau.show();
+        String FXMLPATH_quanlytau = "/DashBroard/Quanlytau/quanlytau.fxml";
+        try {
+            Show_Window showWindow = new Show_Window();
+            showWindow.Show(FXMLPATH_quanlytau);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         stage_dashbroard.close();
     }
 
     @FXML
     void Switch_xemKhachhang(MouseEvent event) throws IOException {
         stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-
-        Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/QuanlyKhachhang/quanlyKhachhang.fxml"));
-        Scene scene_quanlykhachhang = new Scene(root2);
-        stage_quanlykhachhang.initStyle(StageStyle.TRANSPARENT);
-        stage_quanlykhachhang.setScene(scene_quanlykhachhang);
-
-        stage_quanlykhachhang.show();
+        stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        String FXMLPATH_quanlytau = "/DashBroard/QuanlyKhachhang/quanlyKhachhang.fxml";
+        try {
+            Show_Window showWindow = new Show_Window();
+            showWindow.Show(FXMLPATH_quanlytau);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         stage_dashbroard.close();
     }
 

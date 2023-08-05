@@ -67,7 +67,7 @@ public class InformationPassengerController implements Initializable {
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
     Passenger customerInformation = null;
-    Stage stage_dashbroard, stage_quanlytau, stage_quanlychuyentau = new Stage();
+    Stage stage_dashbroard= new Stage();
 
     private static String ID_Customer;
 
@@ -233,12 +233,13 @@ public class InformationPassengerController implements Initializable {
     @FXML
     void Switch_quanlytau(MouseEvent event) throws IOException {
         stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-
-        Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/Quanlytau/quanlytau.fxml"));
-        Scene scene_quanlytau = new Scene(root2);
-        stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-        stage_quanlytau.setScene(scene_quanlytau);
-        stage_quanlytau.show();
+        String FXMLPATH_quanlytau = "/DashBroard/Quanlytau/quanlytau.fxml";
+        try {
+            Show_Window showWindow = new Show_Window();
+            showWindow.Show(FXMLPATH_quanlytau);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         stage_dashbroard.close();
     }
 
@@ -246,11 +247,13 @@ public class InformationPassengerController implements Initializable {
     void Switch_train_form(MouseEvent event) throws IOException {
         stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 
-        Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/dashbroard.fxml"));
-        Scene scene_quanlychuyentau = new Scene(root2);
-        stage_quanlychuyentau.initStyle(StageStyle.TRANSPARENT);
-        stage_quanlychuyentau.setScene(scene_quanlychuyentau);
-        stage_quanlychuyentau.show();
+        String FXMLPATH_quanlychuyentau = "/DashBroard/dashbroard.fxml";
+        try {
+            Show_Window showWindow = new Show_Window();
+            showWindow.Show(FXMLPATH_quanlychuyentau);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         stage_dashbroard.close();
     }
 
