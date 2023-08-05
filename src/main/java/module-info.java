@@ -17,4 +17,6 @@ module com.example.vetau {
     opens com.example.vetau.models to javafx.base;
     exports com.example.vetau.Main;
     opens com.example.vetau.Main to javafx.fxml;
+    exports com.example.vetau.Password;
+    opens com.example.vetau.Password to javafx.fxml;
 }

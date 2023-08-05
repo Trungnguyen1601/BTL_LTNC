@@ -158,7 +158,7 @@ public class MainController {
                 alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("User exist in database");
                 alert.setHeaderText(null);
-                alert.setContentText("Please enter usename khác");
+                alert.setContentText("Please enter the other username");
                 alert.showAndWait();
 
             }else if (!ValidEmail(signup_email.getText()))
@@ -169,7 +169,6 @@ public class MainController {
                     ||signup_cccd.getText().isEmpty()||signup_gioitinh.getText().isEmpty()||signup_usename.getText().isEmpty()){
                 alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error Message");
-                alert.setHeaderText("Hi Hi");
                 alert.setContentText("Please fill all blank field");
                 alert.showAndWait();
             }else{
@@ -179,7 +178,7 @@ public class MainController {
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Information Message");
                     alert.setHeaderText(null);
-                    alert.setContentText("Successfully create a new acconut");
+                    alert.setContentText("Successfully create a new account");
                     alert.showAndWait();
 
                     signup_name.setText("");
@@ -222,7 +221,6 @@ public class MainController {
             {
                 alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error Message");
-                alert.setHeaderText("Hi Hi");
                 alert.setContentText("Please fill all blank field");
                 alert.showAndWait();
             }else{
