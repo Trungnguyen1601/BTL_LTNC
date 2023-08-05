@@ -26,7 +26,7 @@
                                         <FontAwesomeIcon glyphName="CLOSE" />
                                     </graphic>
                                 </Button>
-                                <Button fx:id="quanlytau_minus" layoutX="1212.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#quanlytau_minus_click" prefHeight="24.0" prefWidth="54.0" styleClass="minimize" stylesheets="@../DesignDashBroard.css">
+                                <Button fx:id="quanlytau_minus" layoutX="1268.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#quanlytau_minus_click" prefHeight="24.0" prefWidth="54.0" styleClass="minimize" stylesheets="@../DesignDashBroard.css">
                                     <graphic>
                                         <FontAwesomeIcon glyphName="MINUS" />
                                     </graphic>
@@ -37,11 +37,6 @@
                                     </font>
                                 </Label>
                                 <FontAwesomeIcon fill="#2715cf" glyphName="TRAIN" layoutX="14.0" layoutY="38.0" selectionFill="#c11515" size="2em" />
-                                <Button fx:id="quanlytau_phongto" layoutX="1267.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#quanlytau_phongto_click" prefHeight="24.0" prefWidth="54.0" styleClass="minimize" stylesheets="@../DesignDashBroard.css">
-                                    <graphic>
-                                        <FontAwesomeIcon glyphName="PLUS" />
-                                    </graphic>
-                                </Button>
                             </children>
                         </AnchorPane>
                     </children>
@@ -152,8 +147,11 @@
                                         </TableView>
                                         <TextField fx:id="search_tau_txt" alignment="CENTER" layoutX="26.0" layoutY="4.0" prefHeight="32.0" prefWidth="230.0" promptText="Search" styleClass="search" stylesheets="@../DesignDashBroard.css" AnchorPane.topAnchor="5.0" />
                                         <FontAwesomeIcon glyphName="SEARCH" layoutX="34.0" layoutY="27.0" size="1.5em" text="" />
-                                        <Label fx:id="chucnang_id" layoutX="460.0" layoutY="12.0" />
-                              <FontAwesomeIcon glyphName="REFRESH" layoutX="806.0" layoutY="29.0" onMouseClicked="#Refresh_click" size="2em" />
+                              <Button layoutX="792.0" layoutY="4.0" mnemonicParsing="false" styleClass="refresh" stylesheets="@../DesignDashBroard.css">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="REFRESH" onMouseClicked="#Refresh_click" size="2em" />
+                                 </graphic>
+                              </Button>
                                     </children>
                                 </AnchorPane>
                             </children>

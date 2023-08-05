@@ -1,6 +1,7 @@
 package com.example.vetau.TableView.QuanLyTau;
 
 import com.example.vetau.Show.Button_Extend;
+import com.example.vetau.Show.Show_Window;
 import com.example.vetau.helpers.Database;
 import com.example.vetau.models.ChitietTau;
 import com.example.vetau.models.Passenger;
@@ -91,9 +92,6 @@ public class QuanLyTauController implements Initializable {
     private Button quanlytau_minus;
 
     @FXML
-    private Button quanlytau_phongto;
-
-    @FXML
     private Button search_btn_id;
 
     @FXML
@@ -134,7 +132,6 @@ public class QuanLyTauController implements Initializable {
     }
     @FXML
     void Insert_tau_click(MouseEvent event) {
-
     }
     @FXML
     void quanlytau_close_click(MouseEvent event) {
@@ -148,15 +145,9 @@ public class QuanLyTauController implements Initializable {
         stage.setIconified(true);
     }
 
-    @FXML
-    void quanlytau_phongto_click(MouseEvent event) {
-
-    }
     Parent root;
     Stage stage_dashbroard = new Stage();
     Stage stage_quanlytau = new Stage();
-
-
     {
         try {
             root = FXMLLoader.load(getClass().getResource("/DashBroard/dashbroard.fxml"));
@@ -198,15 +189,10 @@ public class QuanLyTauController implements Initializable {
                 if (empty) {
                     setGraphic(null);
                 } else {
-                    //System.out.println("Trung");
                     setGraphic(deleteButton);
                     deleteButton.setOnAction(event -> {
-
                         ChitietTau tau = getTableView().getItems().get(getIndex());
                         TauList.remove(tau);
-                        //Delete_inDB(train.getID_train());
-                        //System.out.println("Xóa sinh viên: " + tau.getID_train());
-
                     });
                 }
             }
@@ -224,14 +210,6 @@ public class QuanLyTauController implements Initializable {
 
                     UpdateButton.setOnAction(event -> {
                         ChitietTau tau = getTableView().getItems().get(getIndex());
-                        //Train_id = train.getID_train();
-//                        //String FXMLPATH = "/DashBroard/InformationView/Information_train.fxml";
-//                        try {
-//                            Show_Window showWindow =new Show_Window();
-//                            showWindow.Show(FXMLPATH);
-//                        } catch (IOException e) {
-//                            throw new RuntimeException(e);
-//                        }
                     });
                 }
             }
@@ -262,9 +240,6 @@ public class QuanLyTauController implements Initializable {
                         resultSet.getInt("SLghe"),
                         resultSet.getString("loaitoa"))
                         );
-
-
-
             }
             Tau_table.setItems(TauList);
 
@@ -283,7 +258,6 @@ public class QuanLyTauController implements Initializable {
             // Lấy dữ liệu từ cơ sở dữ liệu và thêm vào combobox
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-//                    System.out.println(resultSet.getInt("idTau"));
                 String ID_Tau = resultSet.getString("ID_Tau");
                 int soluongtoa = resultSet.getInt("Soluongtoa");
 
@@ -291,11 +265,6 @@ public class QuanLyTauController implements Initializable {
                 tau_id_combobox.getItems().add(tau);
             }
 
-            // Xử lý sự kiện khi combobox được chọn
-//            gadi_id_combox.setOnAction(event -> {
-//                String selectedTrain = gadi_id_combox.getValue();
-//
-//            });
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -303,9 +272,9 @@ public class QuanLyTauController implements Initializable {
     @FXML
     void Select_toa_combobox(MouseEvent event) {
         Toa_id_combobox.getItems().clear();
-        Tau tau = tau_id_combobox.getValue();
-        String ID_tau = tau.getIDTau();
-        System.out.println(ID_tau);
+//        Tau tau = tau_id_combobox.getValue();
+        String ID_tau = String.valueOf(tau_id_combobox.getValue());
+//        String ID_tau = tau.getIDTau();
         query = "SELECT ID_Toatau FROM toa_tau\n" +
                 "WHERE ID_Tau = ?";
         try {
@@ -398,14 +367,14 @@ public class QuanLyTauController implements Initializable {
     @FXML
     void Switch_xemKhachhang(MouseEvent event) throws IOException {
         stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        String FXMLPATH_quanlykhachhang = "/DashBroard/QuanlyKhachhang/quanlyKhachhang.fxml";
 
-        Parent root2 = FXMLLoader.load(getClass().getResource("/DashBroard/QuanlyKhachhang/quanlyKhachhang.fxml"));
-        Scene scene_quanlytau = new Scene(root2);
-        stage_quanlytau.initStyle(StageStyle.TRANSPARENT);
-        stage_quanlytau.setTitle("Quan lý tàu");
-        stage_quanlytau.setScene(scene_quanlytau);
-
-        stage_quanlytau.show();
+        try {
+            Show_Window showWindow = new Show_Window();
+            showWindow.Show(FXMLPATH_quanlykhachhang);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         stage_dashbroard.close();
     }
     public void Insert_Tau()

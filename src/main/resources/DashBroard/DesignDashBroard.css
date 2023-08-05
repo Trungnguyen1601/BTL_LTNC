@@ -15,7 +15,7 @@
     -fx-cursor:hand;
 }
 .minimize:hover{
-    -fx-background-color:#dadada;
+    -fx-background-color:#dff3ffff;
 }
 
 .nav-form{
@@ -188,5 +188,13 @@
     -fx-border-color:#ae2d3c;
     -fx-border-radius:10px 0px 0px 10px;
 
+}
+
+.refresh{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.refresh:hover{
+    -fx-background-color:#c2e7ffff;
 }
 
