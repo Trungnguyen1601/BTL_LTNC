@@ -60,10 +60,6 @@ public class QuanLyTauController implements Initializable {
 
     @FXML
     private TableColumn<ChitietTau, Button> Update_col;
-
-    @FXML
-    private Label chucnang_id;
-
     @FXML
     private Button clear_btn_add_id;
 
@@ -132,6 +128,7 @@ public class QuanLyTauController implements Initializable {
     }
     @FXML
     void Insert_tau_click(MouseEvent event) {
+        Insert_Tau();
     }
     @FXML
     void quanlytau_close_click(MouseEvent event) {
@@ -289,27 +286,20 @@ public class QuanLyTauController implements Initializable {
         }
 
     }
-    public void combobox_loaitoa()
-    {
+    public void combobox_loaitoa() {
         try {
-
             query = "SELECT DISTINCT Loaitoa FROM toa_tau";
             preparedStatement = connection.prepareStatement(query);
 
             // Lấy dữ liệu từ cơ sở dữ liệu và thêm vào combobox
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-//                    System.out.println(resultSet.getInt("idTau"));
                 String loaitoa = resultSet.getString("Loaitoa");
-
                 Loaitoa_id_combobox.getItems().add(loaitoa);
             }
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
     public void Search_Tau()
     {
@@ -379,7 +369,17 @@ public class QuanLyTauController implements Initializable {
     }
     public void Insert_Tau()
     {
+        query = "INSERT INTO `tau` (`ID_Tau`, `Soluongtoa`) VALUES (?, ?)";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, tau_add_id.getText());
+            preparedStatement.setString(2, Soluongtoa_id.getText());
 
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        RefreshTable();
     }
 
     private void searchTrain_txt() {
