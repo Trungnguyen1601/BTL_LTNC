@@ -571,7 +571,6 @@ public class DashBroardController implements Initializable {
     @FXML
     void Switch_xemKhachhang(MouseEvent event) throws IOException {
         stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-        stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
         String FXMLPATH_quanlytau = "/DashBroard/QuanlyKhachhang/quanlyKhachhang.fxml";
         try {
             Show_Window showWindow = new Show_Window();
