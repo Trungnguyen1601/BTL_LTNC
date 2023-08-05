@@ -282,17 +282,24 @@ public class DashBroardController implements Initializable {
     {
 
         query = "DELETE FROM chuyen_tau WHERE ID_Chuyentau = ?";
-        try {
-            preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1,ID);
-            int check = preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
+        alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Error Message");
+        alert.setHeaderText(null);
+        alert.setContentText("Bạn xác nhận muốn xóa?");
+        Optional<ButtonType> option = alert.showAndWait();
+        if (option.get().equals(ButtonType.OK)) {
+            try {
+                preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1,ID);
+                int check = preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            refreshTable();
         }
-
-
-
     }
+
     public int Count_Database_chuyentau()
     {
         int totalCount = 0;
@@ -410,7 +417,6 @@ public class DashBroardController implements Initializable {
             chuyentauList.clear();
             while (resultSet.next())
             {
-//                System.out.println("Thong tin ga tau tim kiem " + resultSet.getString("TT_Chuyentau.ID_GaDi"));
                 gadi =new Ga_tau(resultSet.getString("TT_Chuyentau.ID_GaDi")
                         ,resultSet.getString("TT_Chuyentau.TenGaDi")
                         ,resultSet.getString("TT_Chuyentau.DiaDiem_gadi"));
