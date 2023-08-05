@@ -119,7 +119,7 @@ public class ForgotPasswordController {
 
     public void OK_btn() {
         if (username_forgotPass.getText().isEmpty() || email_forgotPass.getText().isEmpty()) {
-            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Please complete all information!");
             Optional<ButtonType> option = alert.showAndWait();
         }
@@ -164,8 +164,8 @@ public class ForgotPasswordController {
     public void changePass_close() {
         try {
             alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Error Message");
-            alert.setHeaderText(null);
+//            alert.setTitle("Error Message");
+//            alert.setHeaderText(null);
             alert.setContentText("Are you sure you want to quit?");
             Optional<ButtonType> option = alert.showAndWait();
 
@@ -228,12 +228,12 @@ public class ForgotPasswordController {
 
     public void accept_btn () {
         if (newPass_change.getText().isEmpty() || verifyNewPass_change.getText().isEmpty()) {
-            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Please complete all information!");
             Optional<ButtonType> option = alert.showAndWait();
         } else if (!newPass_change.getText().equals(verifyNewPass_change.getText())) {
             /* Check if the new password and confirmation are not match */
-            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Password does not match!");
             Optional<ButtonType> option = alert.showAndWait();
         } else {
