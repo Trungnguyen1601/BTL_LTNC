@@ -1,6 +1,11 @@
-
 .bg-form{
     -fx-background-color: white;
+    -fx-border-width: .2px .2px .4px .2px;
+}
+
+.bg-form-child{
+    -fx-background-color: #d3edff;
+    -fx-border-width: .2px .2px .4px .2px;
 }
 
 .close{
@@ -102,5 +107,22 @@
 .add_textfield:focused {
     -fx-border-color:#35529d;
     -fx-border-width: 2px;
+}
+
+.combo-box {
+    -fx-border-width: 0.5px;
+    -fx-border-color: #ACACAC;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-font-size: 13px;
+
+}
+
+.combo-box :hover {
+    -fx-text-fill: white;
+}
+
+.combo-box :focused {
+    -fx-text-fill: white;
 }
 

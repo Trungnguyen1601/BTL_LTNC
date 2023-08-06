@@ -108,7 +108,7 @@ public class QuanLyTauController implements Initializable {
     Statement statement = null;
     ResultSet resultSet = null;
     Tau tau = null;
-
+    Stage stage_dashbroard = new Stage();
     ObservableList<ChitietTau> TauList = FXCollections.observableArrayList();
     ObservableList<Button_Extend> Button_List = FXCollections.observableArrayList();
     @FXML
@@ -140,29 +140,6 @@ public class QuanLyTauController implements Initializable {
     void quanlytau_minus_click(MouseEvent event) {
         Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
         stage.setIconified(true);
-    }
-
-    Parent root;
-    Stage stage_dashbroard = new Stage();
-    Stage stage_quanlytau = new Stage();
-    {
-        try {
-            root = FXMLLoader.load(getClass().getResource("/DashBroard/dashbroard.fxml"));
-            Scene scene_DashBroard = new Scene(root);
-            stage_dashbroard.initStyle(StageStyle.TRANSPARENT);
-            stage_dashbroard.setTitle("DashBroard");
-            stage_dashbroard.setScene(scene_DashBroard);
-
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-    @FXML
-    void Switch_train_form(MouseEvent event) {
-        stage_quanlytau = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-        stage_dashbroard.show();
-        stage_quanlytau.close();
     }
 
     public void loadData()
@@ -207,6 +184,13 @@ public class QuanLyTauController implements Initializable {
 
                     UpdateButton.setOnAction(event -> {
                         ChitietTau tau = getTableView().getItems().get(getIndex());
+                        String FXMLPATH = "/DashBroard/InformationView/Information_train.fxml";
+                        try {
+                            Show_Window showWindow =new Show_Window();
+                            showWindow.Show(FXMLPATH);
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
                     });
                 }
             }
@@ -352,7 +336,19 @@ public class QuanLyTauController implements Initializable {
             throw new RuntimeException(e);
         }
         Tau_table.setItems(TauList);
+    }
+    @FXML
+    void Switch_train_form(MouseEvent event) {
+        stage_dashbroard =  (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        String FXMLPATH_quanlychuyentau = "/DashBroard/dashbroard.fxml";
 
+        try {
+            Show_Window showWindow = new Show_Window();
+            showWindow.Show(FXMLPATH_quanlychuyentau);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage_dashbroard.close();
     }
     @FXML
     void Switch_xemKhachhang(MouseEvent event) throws IOException {

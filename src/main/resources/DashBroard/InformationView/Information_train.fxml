@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -100,18 +99,13 @@
       </AnchorPane>
       <AnchorPane fx:id="Edit_form" layoutX="75.0" layoutY="94.0" prefHeight="600.0" prefWidth="650.0" styleClass="bg-form" stylesheets="@control.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="7.0" layoutY="93.0" prefHeight="506.0" prefWidth="645.0" styleClass="bg-form" stylesheets="@../Quanlytau/ThemTau/giaodien.css">
+            <AnchorPane layoutX="7.0" layoutY="93.0" prefHeight="506.0" prefWidth="645.0" styleClass="bg-form-child" stylesheets="@control.css">
                <children>
-                  <TextField fx:id="giodi_edit_text" layoutX="111.0" layoutY="117.0" prefHeight="35.0" prefWidth="209.0" styleClass="add_textfield" stylesheets="@control.css" />
-                  <TextField fx:id="soluongtoa_edit_text" layoutX="416.0" layoutY="350.0" prefHeight="35.0" prefWidth="209.0" styleClass="add_textfield" stylesheets="@control.css" />
-                  <Button fx:id="OK_edit_btn" layoutX="284.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#setOK" prefHeight="46.0" prefWidth="98.0" styleClass="update_btn" text="OK">
-                     <stylesheets>
-                        <URL value="@../control.css" />
-                        <URL value="@../DesignDashBroard.css" />
-                     </stylesheets>
-                  </Button>
-                  <ComboBox fx:id="tau_edit_combo" layoutX="416.0" layoutY="283.0" prefHeight="35.0" prefWidth="210.0" stylesheets="@control.css" />
-                  <Label layoutX="61.0" layoutY="58.0" text="Ga đi">
+                  <TextField fx:id="giodi_edit_text" layoutX="100.0" layoutY="118.0" prefHeight="35.0" prefWidth="209.0" styleClass="add_textfield" stylesheets="@control.css" />
+                  <TextField fx:id="soluongtoa_edit_text" layoutX="416.0" layoutY="278.0" prefHeight="35.0" prefWidth="209.0" styleClass="add_textfield" stylesheets="@control.css" />
+                  <Button fx:id="OK_edit_btn" layoutX="471.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#setOK" prefHeight="46.0" prefWidth="98.0" styleClass="update_btn" stylesheets="@../control.css" text="OK" />
+                  <ComboBox fx:id="tau_edit_combo" layoutX="415.0" layoutY="127.0" prefHeight="35.0" prefWidth="210.0" stylesheets="@control.css" />
+                  <Label layoutX="32.0" layoutY="59.0" text="Ga đi">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font></Label>
@@ -119,23 +113,23 @@
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font></Label>
-                  <Label layoutX="59.0" layoutY="126.0" text="Giờ đi">
+                  <Label layoutX="30.0" layoutY="126.0" text="Giờ đi">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font></Label>
-                  <Label layoutX="315.0" layoutY="292.0" text="Tàu">
+                  <Label layoutX="354.0" layoutY="126.0" text="Tàu">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font></Label>
-                  <Label layoutX="281.0" layoutY="355.0" prefHeight="24.0" prefWidth="104.0" text="Số lượng toa" wrapText="true">
+                  <Label layoutX="333.0" layoutY="269.0" prefHeight="53.0" prefWidth="75.0" text="Số lượng toa" textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font></Label>
-                  <ComboBox fx:id="gadi_edit_combo" layoutX="111.0" layoutY="49.0" prefHeight="35.0" prefWidth="210.0" stylesheets="@control.css" />
-                  <ComboBox fx:id="gaden_edit_combo" layoutX="415.0" layoutY="50.0" prefHeight="35.0" prefWidth="210.0" stylesheets="@control.css" />
-                  <DatePicker fx:id="ngaydi_edit_date" layoutX="415.0" layoutY="127.0" prefHeight="35.0" prefWidth="210.0" stylesheets="@control.css" />
+                  <ComboBox fx:id="gadi_edit_combo" layoutX="99.0" layoutY="50.0" prefHeight="35.0" prefWidth="210.0" stylesheets="@control.css" />
+                  <ComboBox fx:id="gaden_edit_combo" layoutX="415.0" layoutY="50.0" prefHeight="35.0" prefWidth="210.0" styleClass="combo-box" stylesheets="@control.css" />
+                  <DatePicker fx:id="ngaydi_edit_date" layoutX="99.0" layoutY="191.0" prefHeight="35.0" prefWidth="210.0" stylesheets="@control.css" />
                   <DatePicker fx:id="ngayden_edit_date" layoutX="415.0" layoutY="191.0" prefHeight="35.0" prefWidth="210.0" stylesheets="@control.css" />
-                  <Label layoutX="338.0" layoutY="126.0" text="Ngày đi">
+                  <Label layoutX="23.0" layoutY="200.0" text="Ngày đi">
                      <font>
                         <Font name="System Bold Italic" size="14.0" />
                      </font></Label>
