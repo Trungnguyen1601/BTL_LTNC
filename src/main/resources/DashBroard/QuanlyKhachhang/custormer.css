@@ -43,7 +43,7 @@
     -fx-cursor:hand;
 }
 .minimize:hover{
-    -fx-background-color:#dadada;
+    -fx-background-color:#dff3ffff;
 }
 
 .nav-btn{
@@ -56,4 +56,16 @@
 }
 .nav-btn:hover{
     -fx-background-color:linear-gradient(to bottom right, #3862c2, #4284d0);
+}
+.add_textfield{
+    -fx-background-color:#fff;
+    -fx-background-radius:0px 5px 0px 0px;
+    -fx-border-color:#1e242e;
+    -fx-border-width:.8px;
+    -fx-border-radius:0px 5px 0px 0px;
+    -fx-font-size: 14px;
+}
+.add_textfield:focused {
+    -fx-border-color:#35529d;
+    -fx-border-width: 2px;
 }

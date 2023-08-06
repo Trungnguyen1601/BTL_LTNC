@@ -18,7 +18,7 @@
             <top>
                 <AnchorPane prefHeight="32.0" prefWidth="1350.0" BorderPane.alignment="CENTER">
                     <children>
-                        <AnchorPane prefHeight="32.0" prefWidth="1350.0">
+                        <AnchorPane prefHeight="32.0" prefWidth="1350.0" styleClass="bg-white" stylesheets="@custormer.css">
                             <children>
                                 <Button fx:id="dashboard_close" layoutX="1294.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#Setdashboard_close" prefHeight="24.0" prefWidth="56.0" styleClass="close" stylesheets="@custormer.css">
                                     <graphic>
@@ -98,7 +98,7 @@
                                             </font>
                                         </Label>
                                         <FontAwesomeIcon glyphName="USER" layoutX="23.0" layoutY="24.0" size="1.2em" />
-                                        <TextField fx:id="search_customer_txt" layoutX="860.0" layoutY="3.0" prefHeight="24.0" prefWidth="192.0" styleClass="add_textfield" stylesheets="@DesignDashBroard.css" />
+                                        <TextField fx:id="search_customer_txt" layoutX="860.0" layoutY="3.0" prefHeight="24.0" prefWidth="192.0" styleClass="add_textfield" stylesheets="@custormer.css" />
                                         <FontAwesomeIcon glyphName="SEARCH" layoutX="837.0" layoutY="23.0" />
                                     </children></AnchorPane>
                                 <AnchorPane layoutY="38.0" prefHeight="680.0" prefWidth="1060.0" styleClass="bg-white" stylesheets="@custormer.css">

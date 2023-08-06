@@ -11,7 +11,7 @@
     <children>
         <AnchorPane prefHeight="68.0" prefWidth="650.0" styleClass="bg-form" stylesheets="@control.css">
             <children>
-                <Button fx:id="Infor_close_btn" layoutX="594.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#Setdashbroaed_close" prefHeight="24.0" prefWidth="56.0" styleClass="close" stylesheets="@DesignDashBroard.css">
+                <Button fx:id="Infor_close_btn" layoutX="594.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#Setdashbroaed_close" prefHeight="24.0" prefWidth="56.0" styleClass="close" stylesheets="@control.css">
                     <graphic>
                         <FontAwesomeIcon glyphName="CLOSE" />
                     </graphic>
